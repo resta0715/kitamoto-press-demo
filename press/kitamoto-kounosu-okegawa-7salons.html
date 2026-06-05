@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>【完全取材】北本・鴻巣・桶川エリアで髪質改善が人気の美容室7選 | BSR PRESS</title>
 <meta name="description" content="北本・鴻巣・桶川エリアで髪質改善に定評のある美容室7軒を厳選紹介。">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="page-version" content="design-v3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -16,9 +18,9 @@
   --bsr-text: #333;
   --bsr-muted: #666;
   --bsr-border: #e8e8e8;
-  --layout-max: 1180px;
-  --content-max: 760px;
-  --sidebar-w: 240px;
+  --layout-max: min(1400px, 95vw);
+  --sidebar-w: 220px;
+  --img-base: https://resta0715.github.io/kitamoto-press-demo/press/images/;
   --hpb-orange: #ff6b00;
   --hpb-bg: linear-gradient(135deg, #fff5eb 0%, #ffe8d6 100%);
 }
@@ -26,9 +28,9 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--bsr-text);
-  background: #f4f4f6;
-  line-height: 1.85;
-  font-size: 15px;
+  background: #ececf0;
+  line-height: 1.9;
+  font-size: 18px;
 }
 a { color: var(--bsr-pink); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -45,7 +47,8 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 2px 12px rgba(0,0,0,.06);
 }
 .site-header-inner {
-  max-width: var(--layout-max);
+  width: min(1400px, 95vw);
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -68,13 +71,31 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 20px;
   color: var(--bsr-pink-dark);
 }
+.v2-badge, .v3-badge {
+  background: var(--bsr-pink) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  padding: 8px 18px !important;
+  border: none !important;
+  letter-spacing: .06em;
+}
+.update-banner {
+  background: linear-gradient(90deg, var(--bsr-pink), #ff6b9d);
+  color: #fff;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
 
 /* Hero */
 .hero {
   position: relative;
-  min-height: 320px;
+  min-height: 480px;
   background: #222 center/cover no-repeat;
-  background-image: url('images/hero-salon.jpg');
+  background-image: url('https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg');
   display: flex;
   align-items: flex-end;
 }
@@ -86,10 +107,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-inner {
   position: relative;
-  max-width: var(--layout-max);
+  width: min(1400px, 95vw);
+  max-width: 100%;
   margin: 0 auto;
-  padding: 48px 24px 40px;
-  width: 100%;
+  padding: 56px max(2.5vw, 24px) 48px;
   color: #fff;
 }
 .hero-tag {
@@ -105,31 +126,51 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-title {
   font-family: 'Noto Serif JP', serif;
-  font-size: clamp(22px, 3.5vw, 36px);
-  line-height: 1.4;
-  margin-bottom: 12px;
-  text-shadow: 0 2px 8px rgba(0,0,0,.3);
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.35;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.4);
 }
 .hero-lead {
-  font-size: 14px;
-  opacity: .92;
-  max-width: 640px;
-  line-height: 1.75;
+  font-size: 18px;
+  opacity: .95;
+  max-width: 720px;
+  line-height: 1.8;
 }
 
-/* Layout */
+/* Layout — mobile first, wide on PC */
 .page-wrap {
-  max-width: var(--layout-max);
+  width: min(1400px, 95vw);
+  max-width: 100%;
   margin: 0 auto;
-  padding: 32px 24px 80px;
-  display: grid;
-  grid-template-columns: var(--sidebar-w) 1fr;
-  gap: 40px;
-  align-items: start;
+  padding: 32px 16px 60px;
+  display: block;
 }
-.sidebar {
-  position: sticky;
-  top: 72px;
+.main {
+  min-width: 0;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  body { font-size: 18px; }
+  .page-wrap {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    gap: 36px;
+    padding: 48px max(2.5vw, 32px) 80px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .hero-lead { font-size: 19px; max-width: 900px; }
+  .salon-name { font-size: 30px; }
+  .salon-catch { font-size: 18px; }
+  .section-h2 { font-size: 28px; }
+  .section-h3 { font-size: 20px; }
+  table { font-size: 15px; }
+  .content-card { padding: 40px 48px; }
+  .salon-body { padding: 36px 48px 44px; }
+  .salon-header { grid-template-columns: 1fr minmax(280px, 380px); min-height: 240px; }
+  .salon-header-img { min-height: 240px; }
 }
 .sidebar-card {
   background: #fff;
@@ -148,25 +189,27 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .sidebar nav a {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--bsr-text);
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px dashed #eee;
   text-decoration: none;
   line-height: 1.5;
 }
 .sidebar nav a:hover { color: var(--bsr-pink); }
-.sidebar-salon { font-weight: 700; color: var(--bsr-pink); margin-top: 8px; }
-
-.main { min-width: 0; }
+.sidebar-salon { font-weight: 700; color: var(--bsr-pink); margin-top: 8px; display: block; font-size: 13px; }
+.sidebar {
+  position: sticky;
+  top: 72px;
+}
 
 /* Content blocks */
 .content-card {
   background: #fff;
-  border-radius: 8px;
-  padding: 28px 32px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 16px rgba(0,0,0,.05);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.08);
 }
 .article-meta {
   font-size: 12px;
@@ -184,21 +227,21 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .section-h2 {
   font-family: 'Noto Serif JP', serif;
-  font-size: 24px;
-  margin: 0 0 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--bsr-pink);
+  font-size: 28px;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--bsr-pink);
   color: #222;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .section-h2 .num {
   background: var(--bsr-pink);
   color: #fff;
-  font-size: 13px;
-  width: 28px;
-  height: 28px;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -207,21 +250,21 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: 'Noto Sans JP', sans-serif;
 }
 .section-h3 {
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 700;
-  margin: 24px 0 12px;
-  color: #333;
-  padding-left: 12px;
-  border-left: 3px solid var(--bsr-pink-soft);
+  margin: 28px 0 14px;
+  color: #222;
+  padding-left: 14px;
+  border-left: 4px solid var(--bsr-pink);
 }
 .section-h4 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
-  margin: 18px 0 8px;
+  margin: 22px 0 10px;
   color: var(--bsr-pink);
 }
-p { margin-bottom: 14px; }
-.lead-em { font-weight: 700; font-size: 16px; color: #222; }
+p { margin-bottom: 16px; }
+.lead-em { font-weight: 700; font-size: 19px; color: #222; }
 ul { margin: 0 0 16px 1.2em; }
 li { margin-bottom: 6px; }
 
@@ -300,24 +343,26 @@ li { margin-bottom: 6px; }
 
 /* Tables */
 .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 6px; border: 1px solid var(--bsr-border); }
-table { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; }
-th, td { border-bottom: 1px solid var(--bsr-border); padding: 11px 14px; text-align: left; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; background: #fff; }
+th, td { border-bottom: 1px solid var(--bsr-border); padding: 14px 16px; text-align: left; }
 th { background: var(--bsr-pink-light); font-weight: 700; white-space: nowrap; }
 tr:last-child td, tr:last-child th { border-bottom: none; }
 
 /* Salon section */
 .salon-block {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
-  margin-bottom: 28px;
-  box-shadow: 0 4px 24px rgba(0,0,0,.07);
+  margin-bottom: 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.1);
+  border-top: 6px solid var(--bsr-pink);
 }
 .salon-header {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 340px;
   gap: 0;
-  min-height: 180px;
+  min-height: 220px;
+  background: linear-gradient(135deg, var(--bsr-pink-light) 0%, #fff 60%);
 }
 .salon-header-text {
   padding: 28px 28px 20px;
@@ -334,48 +379,50 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 }
 .salon-name {
   font-family: 'Noto Serif JP', serif;
-  font-size: 22px;
-  margin-bottom: 8px;
-  color: #222;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #111;
 }
 .salon-catch {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
-  color: #444;
-  line-height: 1.6;
+  color: #333;
+  line-height: 1.65;
 }
 .salon-header-img {
   background: var(--bsr-pink-soft) center/cover;
-  min-height: 180px;
+  min-height: 220px;
 }
 .salon-header-img img { width: 100%; height: 100%; object-fit: cover; }
-.salon-body { padding: 24px 28px 28px; }
+.salon-body { padding: 32px 36px 36px; }
 .point-box {
   background: var(--bsr-pink-light);
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin: 16px 0;
-  font-size: 14px;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-size: 17px;
   font-weight: 700;
   color: var(--bsr-pink-dark);
+  border-left: 4px solid var(--bsr-pink);
 }
 .menu-card {
   background: #fafafa;
   border: 1px solid var(--bsr-border);
   border-radius: 8px;
-  padding: 16px 18px;
-  margin-bottom: 12px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
 }
-.menu-card strong { display: block; font-size: 15px; margin-bottom: 6px; color: #222; }
-.menu-card p { margin: 0; font-size: 13px; color: var(--bsr-muted); }
+.menu-card strong { display: block; font-size: 18px; margin-bottom: 8px; color: #222; }
+.menu-card p { margin: 0; font-size: 16px; color: var(--bsr-muted); }
 
 /* CTA Banners */
 .cta-banner {
-  margin: 0 0 28px;
-  border-radius: 10px;
+  margin: 0 0 40px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+  box-shadow: 0 8px 32px rgba(0,0,0,.15);
   transition: transform .2s, box-shadow .2s;
+  display: block;
 }
 .cta-banner:hover {
   transform: translateY(-2px);
@@ -385,23 +432,23 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 .cta-banner-inner {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 24px;
+  gap: 20px;
+  padding: 28px 32px;
   text-decoration: none;
   color: inherit;
 }
-.cta-hpb { background: var(--hpb-bg); border: 2px solid #ffd4a8; }
+.cta-hpb { background: var(--hpb-bg); border: 3px solid var(--hpb-orange); }
 .cta-hpb .cta-logo {
   background: var(--hpb-orange);
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  padding: 8px 10px;
-  border-radius: 6px;
+  padding: 12px 14px;
+  border-radius: 8px;
   text-align: center;
   line-height: 1.3;
   flex-shrink: 0;
-  min-width: 72px;
+  min-width: 88px;
 }
 .cta-bmerit { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); border: 2px solid #4a4a6a; }
 .cta-bmerit .cta-logo {
@@ -416,17 +463,18 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 .cta-bmerit .cta-text { color: #fff; }
 .cta-bmerit .cta-sub { color: rgba(255,255,255,.7); }
 .cta-text { flex: 1; }
-.cta-title { font-weight: 700; font-size: 15px; margin-bottom: 2px; }
-.cta-sub { font-size: 12px; color: var(--bsr-muted); }
+.cta-title { font-weight: 700; font-size: 20px; margin-bottom: 4px; }
+.cta-sub { font-size: 15px; color: var(--bsr-muted); }
 .cta-btn {
   background: var(--hpb-orange);
   color: #fff;
   font-weight: 700;
-  font-size: 13px;
-  padding: 10px 20px;
-  border-radius: 24px;
+  font-size: 17px;
+  padding: 16px 32px;
+  border-radius: 32px;
   flex-shrink: 0;
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(255,107,0,.4);
 }
 .cta-bmerit .cta-btn { background: var(--bsr-pink); }
 .cta-phone { background: #f0f0f2; border: 2px solid #ddd; }
@@ -464,8 +512,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 }
 
 /* Mobile */
-@media (max-width: 900px) {
-  .page-wrap { grid-template-columns: 1fr; gap: 0; padding: 20px 16px 60px; }
+@media (max-width: 1023px) {
+  .page-wrap { width: 100%; padding: 20px 16px 60px; }
   .sidebar { position: static; margin-bottom: 20px; }
   .sidebar nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
   .content-card { padding: 20px 18px; }
@@ -487,9 +535,11 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
       <div class="logo-mark">BSR PRESS</div>
       <div class="logo-sub">ベストサロンレポート</div>
     </div>
-    <span class="demo-badge">デモ（叩き台）</span>
+    <span class="demo-badge v3-badge">DESIGN v3 · PCワイド</span>
   </div>
 </header>
+
+<div class="update-banner">✨ v3更新：PC画面幅95%・文字サイズ拡大・予約バナー強調</div>
 
 <section class="hero">
   <div class="hero-inner">
@@ -553,8 +603,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
     <div class="content-card" id="reason">
       <h2 class="section-h2"><span class="num">1</span>北本・鴻巣・桶川で髪質改善が人気の理由</h2>
       <div class="visual-strip">
-        <div class="visual-strip-item"><img src="images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
-        <div class="visual-strip-item"><img src="images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
+        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
+        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
         <div class="visual-strip-item" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"><span class="label" style="position:static;background:none;color:var(--bsr-pink);padding:40px 12px;text-align:center;font-size:13px">縮毛矯正<br>ヘッドスパ<br>低ダメージカラー</span></div>
       </div>
       <h3 class="section-h3">住宅地エリアだからこそ、通いやすい「ケア特化型」サロンが増加</h3>
@@ -586,7 +636,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">美容室Resta</h2>
           <p class="salon-catch">北本No.1縮毛矯正×髪質改善。アイロンレスの独自施術で圧倒的艶髪を。</p>
         </div>
-        <div class="salon-header-img"><img src="images/resta-interior.png" alt="美容室Resta 店内"></div>
+        <div class="salon-header-img"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="美容室Resta 店内"></div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">髪への負担を最小限にした、Resta独自の髪質改善プログラム</h3>
