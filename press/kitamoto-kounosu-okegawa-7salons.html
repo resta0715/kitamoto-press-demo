@@ -11,10 +11,13 @@
 :root {
   --bsr-pink: #e4007f;
   --bsr-pink-light: #fff0f7;
+  --bsr-pink-dark: #c4006e;
   --bsr-text: #333;
   --bsr-muted: #666;
   --bsr-border: #e8e8e8;
-  --max-w: 780px;
+  --max-w: 1040px;
+  --sidebar-w: 220px;
+  --booking-url: "https://d624gw-google.b-merit.jp/y92fw4/web/";
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -57,7 +60,189 @@ body {
   border-radius: 4px;
   color: var(--bsr-muted);
 }
-.wrap { max-width: var(--max-w); margin: 0 auto; padding: 28px 20px 80px; }
+.page-layout {
+  max-width: calc(var(--max-w) + var(--sidebar-w) + 48px);
+  margin: 0 auto;
+  padding: 28px 20px 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 960px) {
+  .page-layout { grid-template-columns: var(--sidebar-w) 1fr; gap: 40px; }
+}
+.sidebar {
+  display: none;
+}
+@media (min-width: 960px) {
+  .sidebar {
+    display: block;
+    position: sticky;
+    top: 72px;
+  }
+  .sidebar-inner {
+    background: #fff;
+    border: 1px solid var(--bsr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  }
+  .sidebar-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bsr-pink);
+    margin-bottom: 12px;
+    letter-spacing: .06em;
+  }
+  .sidebar nav a {
+    display: block;
+    font-size: 12px;
+    color: var(--bsr-muted);
+    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.5;
+  }
+  .sidebar nav a:hover { color: var(--bsr-pink); }
+}
+.article-main { min-width: 0; }
+.hero-block {
+  position: relative;
+  margin: 0 0 28px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff0f7 0%, #fff 50%, #fdf8fa 100%);
+  border: 1px solid var(--bsr-border);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 32px 28px;
+  gap: 24px;
+}
+@media (min-width: 640px) {
+  .hero-block { min-height: 240px; padding: 40px 36px; }
+}
+.hero-text { flex: 1; z-index: 1; }
+.hero-text p {
+  font-size: 14px;
+  color: var(--bsr-muted);
+  margin: 0;
+  line-height: 1.7;
+}
+.hero-illust {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  opacity: .85;
+}
+@media (min-width: 640px) {
+  .hero-illust { width: 160px; height: 160px; }
+}
+.section-illust {
+  float: right;
+  width: 88px;
+  height: 88px;
+  margin: 0 0 12px 16px;
+  opacity: .7;
+}
+@media (max-width: 639px) {
+  .section-illust { display: none; }
+}
+.salon-card {
+  background: #fff;
+  border: 1px solid var(--bsr-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 4px 24px rgba(228,0,127,.06);
+}
+.salon-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.salon-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--bsr-pink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 22px;
+}
+.salon-card-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 4px;
+}
+.salon-card-area {
+  font-size: 12px;
+  color: var(--bsr-muted);
+  margin: 0;
+}
+.salon-cta {
+  margin: 24px 0 0;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, var(--bsr-pink-light) 0%, #fff 100%);
+  border: 1px solid rgba(228,0,127,.15);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.salon-cta-label {
+  font-size: 11px;
+  color: var(--bsr-pink);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin: 0 0 4px;
+}
+.salon-cta-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+.btn-reserve {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px 26px;
+  background: var(--bsr-pink);
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(228,0,127,.25);
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+.btn-reserve:hover {
+  background: var(--bsr-pink-dark);
+  transform: translateY(-1px);
+}
+.btn-reserve::after {
+  content: "→";
+  font-size: 13px;
+}
+.visual-divider {
+  text-align: center;
+  margin: 36px 0;
+  color: var(--bsr-pink);
+  opacity: .35;
+  font-size: 18px;
+  letter-spacing: .5em;
+}
 .article-meta {
   font-size: 12px;
   color: var(--bsr-muted);
@@ -146,9 +331,40 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
     <span class="demo-badge">ローカルデモ（叩き台）</span>
   </div>
 </header>
-<main class="wrap">
+<main class="page-layout">
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <p class="sidebar-title">目次</p>
+    <nav>
+      <a href="#掲載美容室早見表">掲載美容室早見表</a>
+      <a href="#北本・鴻巣・桶川で髪質改善が人気の理由">髪質改善が人気の理由</a>
+      <a href="#美容室resta-北本市">美容室Resta</a>
+      <a href="#美容院react-北本市">美容院React</a>
+      <a href="#hair-salon-sora-北本市">hair salon sora</a>
+      <a href="#re-life-鴻巣市">Re:Life</a>
+      <a href="#髪質改善-ヘッドスパ-atte-鴻巣駅前店-鴻巣市">ATTE 鴻巣駅前店</a>
+      <a href="#美容室-木の葉-桶川市">美容室 木の葉</a>
+      <a href="#style-桶川-桶川市">STYLE 桶川</a>
+      <a href="#おわりに">おわりに</a>
+    </nav>
+  </div>
+</aside>
+<div class="article-main">
   <p class="article-meta"><span>PRESS</span> · 髪質改善 · 北本・鴻巣・桶川 · 2026年6月</p>
   <h1 class="article-title">【完全取材】北本・鴻巣・桶川エリアで髪質改善が人気の美容室7選</h1>
+<div class="hero-block">
+  <div class="hero-text">
+    <p>北本・鴻巣・桶川エリアの髪質改善サロン7軒を、美容ライターが徹底取材。専門店から総合型まで、あなたに合う一軒が見つかる完全ガイドです。</p>
+  </div>
+  <svg class="hero-illust" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="80" cy="80" r="70" fill="#fff0f7"/>
+    <path d="M50 90c8-30 52-30 60 0-5 25-55 25-60 0z" fill="#e4007f" opacity=".15"/>
+    <path d="M55 75c5-18 45-18 50 0-4 15-46 15-50 0z" stroke="#e4007f" stroke-width="2" fill="none"/>
+    <path d="M40 100c15 20 65 20 80 0" stroke="#e4007f" stroke-width="1.5" opacity=".4"/>
+    <circle cx="65" cy="68" r="3" fill="#e4007f" opacity=".5"/>
+    <circle cx="95" cy="68" r="3" fill="#e4007f" opacity=".5"/>
+  </svg>
+</div>
 <p>埼玉県の北本・鴻巣・桶川エリアは、都心へのアクセスも良く、住宅地としても人気のエリアです。近年は「髪質改善」に特化した美容室や、髪質改善メニューを充実させたサロンが増え、広がりやうねり、パサつき、エイジング毛などのお悩みを持つ方から支持を集めています。</p>
 <p>今回は、北本・鴻巣・桶川エリアで髪質改善に定評のある美容室7軒を、弊社美容ライターが厳選してご紹介します。低ダメージのカラーや縮毛矯正、酸熱トリートメント、ヘッドスパなど、サロンごとに特色の異なるアプローチを比較しながら、あなたに合う一軒を見つける参考にしてください。</p>
 <hr class="sep">
@@ -202,6 +418,11 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <div class="writer-comment"><p>▼美容ライター・田中　髪質改善は「1回で劇的に変わる」施術もあれば、「数回通って地肌から整える」タイプもあります。カウンセリングで、あなたの髪に合ったアプローチを提案してくれるサロンを選ぶことが大切です。</p></div>
 <hr class="sep">
 <h2 id="美容室resta-北本市" class="section-h2">美容室Resta（北本市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">✂️</div>
+  <div><p class="salon-card-title">美容室Resta</p><p class="salon-card-area">埼玉県北本市 · 髪質改善特化</p></div>
+</div>
 <p class="lead-em"><strong>北本No.1縮毛矯正×髪質改善。アイロンレスの独自施術で圧倒的艶髪を。</strong></p>
 <h3 class="section-h3">髪への負担を最小限にした、Resta独自の髪質改善プログラム</h3>
 <p>埼玉県北本市下石戸下に所在する美容室Restaは、「じぶん改善で一生HAPPYに」をコンセプトに掲げる、髪質改善特化型サロンです。JR北本駅から車で約5分、駐車場5台完備で、車での来店もしやすい立地です。</p>
@@ -231,8 +452,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR北本駅 車で5分</td></tr>
 <tr><td>駐車場</td><td>あり（5台）</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">美容室Resta</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="美容院react-北本市" class="section-h2">美容院React（北本市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">💇</div>
+  <div><p class="salon-card-title">美容院React</p><p class="salon-card-area">埼玉県北本市 · 髪質改善カラー</p></div>
+</div>
 <p class="lead-em"><strong>92％天然由来オーガニックカラーと髪質改善カラーで、U24世代から大人女性まで支持率◎</strong></p>
 <h3 class="section-h3">「健康な髪のために、美容室で傷ませない」をモットーに</h3>
 <p>埼玉県北本市石戸2丁目にある美容院Reactは、Restaと同グループの髪質改善特化サロン。北本駅西口から徒歩18分、駐車場6台完備の落ち着いた立地で、北本・鴻巣・桶川・上尾エリアから幅広く来店があります。</p>
@@ -262,8 +497,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR北本駅西口 徒歩18分</td></tr>
 <tr><td>駐車場</td><td>あり（6台）</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">美容院React</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="hair-salon-sora-北本市" class="section-h2">hair salon sora（北本市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">🌸</div>
+  <div><p class="salon-card-title">hair salon sora</p><p class="salon-card-area">埼玉県北本市 · 駅近サロン</p></div>
+</div>
 <p class="lead-em"><strong>北本駅西口徒歩1分。少人数制で一人ひとりの骨格・髪質に合わせたスタイルを。</strong></p>
 <h3 class="section-h3">駅近の好立地、3席のプライベートサロン</h3>
 <p>hair salon soraは、JR北本駅西口から徒歩1分の好立地にある、3席の小型サロン。ローソンの先、2軒目のビル2Fに位置し、通勤・買い物ついでにも立ち寄りやすいアクセスです。</p>
@@ -292,8 +541,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR北本駅西口 徒歩1分</td></tr>
 <tr><td>駐車場</td><td>近隣コインパーキング利用</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">hair salon sora</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="re-life-鴻巣市" class="section-h2">Re:Life（鴻巣市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">✨</div>
+  <div><p class="salon-card-title">Re:Life（リライフ）</p><p class="salon-card-area">埼玉県鴻巣市 · 酸性ストレート</p></div>
+</div>
 <p class="lead-em"><strong>5年連続注目サロン選出。92％天然由来オーガニックカラーと酸性ストレートの専門店。</strong></p>
 <h3 class="section-h3">鴻巣駅徒歩3分、2席のプライベート空間</h3>
 <p>Re:Life（リライフ）は、JR鴻巣駅東口から徒歩3分の好立地にある、髪質改善専門美容室。2席のみのプライベート空間で、一人ひとりの髪と向き合う施術が特徴です。</p>
@@ -323,8 +586,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR鴻巣駅東口 徒歩3分</td></tr>
 <tr><td>駐車場</td><td>エルミ鴻巣ショッピングモール立体駐車場（サービス券あり）</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">Re:Life（リライフ）</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="髪質改善-ヘッドスパ-atte-鴻巣駅前店-鴻巣市" class="section-h2">髪質改善&ヘッドスパ ATTE 鴻巣駅前店（鴻巣市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">🌿</div>
+  <div><p class="salon-card-title">髪質改善&ヘッドスパ ATTE</p><p class="salon-card-area">埼玉県鴻巣市 · 髪質改善×ヘッドスパ</p></div>
+</div>
 <p class="lead-em"><strong>髪質改善×ヘッドスパ×育毛。完全予約制マンツーマンサロン。</strong></p>
 <h3 class="section-h3">鴻巣駅東口徒歩4分、大人女性のためのトータルケア</h3>
 <p>髪質改善&ヘッドスパ ATTE 鴻巣駅前店は、JR鴻巣駅東口から徒歩4分の完全予約制マンツーマンサロン。髪質改善・ヘッドスパ・育毛を柱に、髪と頭皮の両面からアプローチします。</p>
@@ -354,8 +631,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR鴻巣駅東口 徒歩4分</td></tr>
 <tr><td>駐車場</td><td>（要確認）</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">髪質改善&ヘッドスパ ATTE 鴻巣駅前店</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="美容室-木の葉-桶川市" class="section-h2">美容室 木の葉（桶川市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">🍃</div>
+  <div><p class="salon-card-title">美容室 木の葉</p><p class="salon-card-area">埼玉県桶川市 · 和漢カラー</p></div>
+</div>
 <p class="lead-em"><strong>10年後のキレイを守る。和漢カラーと形状記憶パーマでダメージレス施術。</strong></p>
 <h3 class="section-h3">3席の少人数制、半個室も完備</h3>
 <p>美容室 木の葉は、埼玉県桶川市坂田東にある、3席の少人数制サロン。木の温もりに包まれた店内は、半個室も完備し、くつろぎと癒やしの空間を提供しています。</p>
@@ -385,8 +676,22 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR桶川駅東口 バス利用</td></tr>
 <tr><td>駐車場</td><td>あり（3台）</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">美容室 木の葉</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="style-桶川-桶川市" class="section-h2">STYLE 桶川（桶川市）</h2>
+<div class="salon-card">
+<div class="salon-card-head">
+  <div class="salon-card-icon">💫</div>
+  <div><p class="salon-card-title">STYLE 桶川</p><p class="salon-card-area">埼玉県桶川市 · フルビューティ</p></div>
+</div>
 <p class="lead-em"><strong>心の底から美しく。フルビューティサロンとして40年以上の実績。</strong></p>
 <h3 class="section-h3">マメトラショッピングセンター内、バリアフリーでファミリーにも優しい</h3>
 <p>STYLE 桶川店は、JR桶川駅から徒歩15分、中山道沿いマメトラショッピングセンター1階にある美容室。無料駐車場完備で、お買い物ついでにも気軽に立ち寄れる立地です。</p>
@@ -416,6 +721,15 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <tr><td>最寄り駅</td><td>JR桶川駅 徒歩15分</td></tr>
 <tr><td>駐車場</td><td>無料駐車場あり</td></tr>
 </table></div>
+<div class="salon-cta">
+  <div>
+    <p class="salon-cta-label">WEB予約受付中</p>
+    <p class="salon-cta-name">STYLE 桶川</p>
+  </div>
+  <a class="btn-reserve" href="https://d624gw-google.b-merit.jp/y92fw4/web/" target="_blank" rel="noopener noreferrer">Web予約はこちら</a>
+</div>
+</div>
+<div class="visual-divider">◆ ◆ ◆</div>
 <hr class="sep">
 <h2 id="おわりに" class="section-h2">おわりに</h2>
 <p>北本・鴻巣・桶川エリアには、髪質改善に特化した専門店から、総合型のフルビューティサロンまで、個性豊かな美容室が揃っています。</p>
@@ -425,6 +739,7 @@ th { background: var(--bsr-pink-light); color: #333; font-weight: 700; white-spa
 <p class="lead-em"><strong>執筆：美容ライター・田中</strong></p>
 <p class="lead-em"><strong>編集：ベストサロンレポート編集部</strong></p>
 <p class="lead-em"><strong>※本記事は2026年6月時点の情報に基づく叩き台です。掲載前に各店舗情報・価格の最新確認が必要です。</strong></p>
+</div>
 </main>
 <footer class="site-footer">
   © ベストサロンレポート風デモ — 掲載前に各店舗情報の最新確認が必要です
