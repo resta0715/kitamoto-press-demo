@@ -3,45 +3,946 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>熊谷・行田エリアで髪質改善が人気の美容室特集 | SALON GUIDE</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<title>【完全取材】熊谷・行田エリアで髪質改善が人気の美容室6選 | SALON GUIDE</title>
+<meta name="description" content="熊谷・行田エリアで髪質改善に定評のある美容室6軒を厳選紹介。">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta name="page-version" content="design-v6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
-:root { --pink: #e4007f; --pink-light: #fff0f7; }
+:root {
+  --bsr-pink: #e4007f;
+  --bsr-pink-dark: #c2006a;
+  --bsr-pink-light: #fff0f7;
+  --bsr-pink-soft: #fce4f0;
+  --bsr-text: #333;
+  --bsr-muted: #666;
+  --bsr-border: #e8e8e8;
+  --container: min(1500px, 98vw);
+  --sidebar-w: 220px;
+  --img-base: https://resta0715.github.io/kitamoto-press-demo/press/images/;
+  --hpb-orange: #ff6b00;
+  --hpb-bg: linear-gradient(135deg, #fff5eb 0%, #ffe8d6 100%);
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Noto Sans JP', sans-serif; background: #fff; color: #333; line-height: 1.85; }
-header { border-bottom: 3px solid var(--pink); padding: 14px 24px; }
-.header-inner { max-width: min(1500px, 98vw); margin: 0 auto; display: flex; align-items: center; gap: 12px; }
-.logo { font-family: 'Noto Serif JP', serif; font-weight: 700; color: var(--pink); font-size: 15px; letter-spacing: .08em; }
-.sub { font-size: 11px; color: #666; }
-.badge { margin-left: auto; font-size: 12px; background: var(--pink-light); color: var(--pink); padding: 5px 12px; border-radius: 20px; border: 1px solid #f5c2dc; }
-main { max-width: min(720px, 92vw); margin: 0 auto; padding: 64px 24px 80px; text-align: center; }
-h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(22px, 4vw, 32px); margin-bottom: 16px; line-height: 1.45; }
-p { font-size: 17px; color: #555; margin-bottom: 28px; }
-.btn { display: inline-block; background: var(--pink); color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; }
-.links { margin-top: 40px; text-align: left; border-top: 1px solid #eee; padding-top: 24px; }
-.links h2 { font-size: 15px; color: var(--pink); margin-bottom: 12px; }
-.links a { display: block; padding: 8px 0; color: #333; text-decoration: none; font-size: 15px; }
-footer { text-align: center; padding: 24px; font-size: 11px; color: #999; border-top: 1px solid #eee; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--bsr-text);
+  background: #f5f5f7;
+  line-height: 1.9;
+  font-size: 16px;
+}
+a { color: var(--bsr-pink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Header */
+.site-header {
+  background: #fff;
+  border-bottom: 3px solid var(--bsr-pink);
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.site-header-inner {
+  width: var(--container);
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-mark {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--bsr-pink);
+  letter-spacing: .1em;
+}
+.logo-sub { font-size: 11px; color: var(--bsr-muted); }
+.demo-badge {
+  margin-left: auto;
+  font-size: 11px;
+  background: var(--bsr-pink-light);
+  border: 1px solid #f5c2dc;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: var(--bsr-pink-dark);
+}
+.v2-badge, .v3-badge, .v4-badge, .v5-badge {
+  background: var(--bsr-pink) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  padding: 8px 18px !important;
+  border: none !important;
+  letter-spacing: .06em;
+}
+.series-badge {
+  background: var(--bsr-pink-light) !important;
+  color: var(--bsr-pink-dark) !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  padding: 6px 14px !important;
+  border: 1px solid #f5c2dc !important;
+  letter-spacing: .04em;
+}
+.area-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.area-link-card {
+  display: block;
+  padding: 20px 22px;
+  border: 1px solid var(--bsr-border);
+  border-radius: 10px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s;
+}
+.area-link-card:hover {
+  border-color: var(--bsr-pink);
+  box-shadow: 0 4px 16px rgba(228,0,127,.12);
+  text-decoration: none;
+}
+.area-link-card strong {
+  display: block;
+  font-size: 16px;
+  color: var(--bsr-pink-dark);
+  margin-bottom: 6px;
+}
+.area-link-card span {
+  font-size: 14px;
+  color: var(--bsr-muted);
+}
+.area-link-card.is-current {
+  border-color: var(--bsr-pink);
+  background: var(--bsr-pink-light);
+}
+.sidebar-areas { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bsr-border); }
+.sidebar-areas a { font-size: 12px; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 480px;
+  background: #222 center/cover no-repeat;
+  background-image: url('https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg');
+  display: flex;
+  align-items: flex-end;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.2) 50%, rgba(228,0,127,.15) 100%);
+}
+.hero-inner {
+  position: relative;
+  width: var(--container);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 56px max(2vw, 24px) 48px;
+  color: #fff;
+}
+.hero-tag {
+  display: inline-block;
+  background: var(--bsr-pink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.35;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0,0,0,.4);
+}
+.hero-lead {
+  font-size: 18px;
+  opacity: .95;
+  line-height: 1.8;
+}
+
+/* ===== v5 Layout: sidebar + wide main ===== */
+.toc-bar { display: none !important; }
+.toc-mobile {
+  display: block;
+  width: calc(100% - 32px);
+  max-width: var(--container);
+  margin: 16px auto 0;
+  background: #fff;
+  border: 1px solid var(--bsr-border);
+  border-radius: 8px;
+}
+.toc-mobile summary {
+  padding: 14px 18px;
+  font-weight: 700;
+  color: var(--bsr-pink);
+  cursor: pointer;
+  list-style: none;
+}
+.toc-mobile summary::-webkit-details-marker { display: none; }
+.toc-mobile nav {
+  padding: 0 18px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+.toc-mobile nav a { font-size: 14px; color: var(--bsr-text); text-decoration: none; }
+
+.content-shell {
+  width: var(--container);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+  background: #fff;
+}
+.page-wrap {
+  width: 100%;
+  display: block;
+}
+.main {
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+}
+.sidebar {
+  display: none;
+}
+.sidebar-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px 14px;
+  border: 1px solid var(--bsr-border);
+  border-top: 3px solid var(--bsr-pink);
+}
+.sidebar-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 15px;
+  color: var(--bsr-pink);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--bsr-border);
+}
+.sidebar nav a {
+  display: block;
+  font-size: 13px;
+  color: var(--bsr-text);
+  padding: 7px 0;
+  border-bottom: 1px dashed #eee;
+  text-decoration: none;
+  line-height: 1.45;
+}
+.sidebar nav a:hover { color: var(--bsr-pink); }
+.sidebar-salon { font-weight: 700; color: var(--bsr-pink); margin-top: 8px; display: block; font-size: 12px; }
+
+@media (min-width: 1200px) {
+  body { font-size: 19px; background: #fff; }
+  .content-shell { padding: 24px 20px 80px; }
+  .page-wrap {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
+  }
+  .sidebar {
+    display: block;
+    position: sticky;
+    top: 64px;
+  }
+  .toc-mobile { display: none; }
+  .hero-inner { width: var(--container); padding-left: 20px; padding-right: 20px; }
+  .hero-title { font-size: 44px; }
+  .hero-lead { font-size: 20px; }
+  .section-h2 { font-size: 32px; }
+  .section-h3 { font-size: 22px; }
+  .salon-name { font-size: 34px; }
+  .salon-catch { font-size: 19px; }
+  table { font-size: 16px; width: 100%; }
+  th, td { padding: 14px 18px; }
+  .content-card {
+    width: 100%;
+    max-width: none;
+    padding: 32px 40px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 8px rgba(0,0,0,.05);
+    border: 1px solid #eee;
+  }
+  .salon-block {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  }
+  .salon-body { padding: 32px 40px 40px; }
+  .salon-header { grid-template-columns: 1fr minmax(300px, 400px); min-height: 240px; }
+  .cta-banner { width: 100%; margin-bottom: 24px; }
+  .table-wrap { width: 100%; }
+  .site-header-inner { width: var(--container); }
+}
+
+/* Content blocks */
+.content-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  width: 100%;
+}
+.article-meta {
+  font-size: 12px;
+  color: var(--bsr-muted);
+  margin-bottom: 8px;
+}
+.article-meta span { color: var(--bsr-pink); font-weight: 700; }
+.disclaimer {
+  background: var(--bsr-pink-light);
+  border-left: 4px solid var(--bsr-pink);
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--bsr-muted);
+  border-radius: 0 6px 6px 0;
+}
+.section-h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 28px;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--bsr-pink);
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-h2 .num {
+  background: var(--bsr-pink);
+  color: #fff;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.section-h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 28px 0 14px;
+  color: #222;
+  padding-left: 14px;
+  border-left: 4px solid var(--bsr-pink);
+}
+.section-h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 22px 0 10px;
+  color: var(--bsr-pink);
+}
+p { margin-bottom: 16px; }
+.lead-em { font-weight: 700; font-size: 19px; color: #222; }
+ul { margin: 0 0 16px 1.2em; }
+li { margin-bottom: 6px; }
+
+/* Visual elements */
+.visual-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.visual-strip-item {
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--bsr-pink-soft);
+  position: relative;
+}
+.visual-strip-item img { width: 100%; height: 100%; object-fit: cover; }
+.visual-strip-item .label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,.7));
+  color: #fff;
+  font-size: 11px;
+  padding: 20px 8px 8px;
+  font-weight: 700;
+}
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--bsr-pink), #ff9ecf, var(--bsr-pink));
+  border-radius: 2px;
+  margin: 32px 0;
+  opacity: .6;
+}
+.icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+.icon-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8f8fa;
+  border: 1px solid var(--bsr-border);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.icon-chip::before {
+  content: '✦';
+  color: var(--bsr-pink);
+  font-size: 10px;
+}
+
+/* Writer comment */
+.writer-comment {
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f7 100%);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 14px;
+  border-left: 4px solid #bbb;
+  position: relative;
+}
+.writer-comment::before {
+  content: '💬';
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  font-size: 18px;
+}
+.writer-comment p { margin: 0; padding-top: 4px; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 6px; border: 1px solid var(--bsr-border); }
+table { width: 100%; border-collapse: collapse; font-size: 16px; background: #fff; }
+th, td { border-bottom: 1px solid var(--bsr-border); padding: 14px 16px; text-align: left; }
+th { background: var(--bsr-pink-light); font-weight: 700; white-space: nowrap; }
+tr:last-child td, tr:last-child th { border-bottom: none; }
+
+/* Salon section */
+.salon-block {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.1);
+  border-top: 6px solid var(--bsr-pink);
+}
+.salon-header {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  min-height: 220px;
+  background: linear-gradient(135deg, var(--bsr-pink-light) 0%, #fff 60%);
+}
+.salon-header-text {
+  padding: 28px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.salon-area {
+  font-size: 11px;
+  color: var(--bsr-pink);
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+}
+.salon-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #111;
+}
+.salon-catch {
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.65;
+}
+.salon-header-img {
+  background: var(--bsr-pink-soft) center/cover;
+  min-height: 220px;
+}
+.salon-header-img img { width: 100%; height: 100%; object-fit: cover; }
+.salon-body { padding: 32px 36px 36px; }
+.point-box {
+  background: var(--bsr-pink-light);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--bsr-pink-dark);
+  border-left: 4px solid var(--bsr-pink);
+}
+.menu-card {
+  background: #fafafa;
+  border: 1px solid var(--bsr-border);
+  border-radius: 8px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.menu-card strong { display: block; font-size: 18px; margin-bottom: 8px; color: #222; }
+.menu-card p { margin: 0; font-size: 16px; color: var(--bsr-muted); }
+
+/* CTA Banners */
+.cta-banner {
+  margin: 0 0 40px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,.15);
+  transition: transform .2s, box-shadow .2s;
+  display: block;
+}
+.cta-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.14);
+  text-decoration: none;
+}
+.cta-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 32px;
+  text-decoration: none;
+  color: inherit;
+}
+.cta-hpb { background: var(--hpb-bg); border: 3px solid var(--hpb-orange); }
+.cta-hpb .cta-logo {
+  background: var(--hpb-orange);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 1.3;
+  flex-shrink: 0;
+  min-width: 88px;
+}
+.cta-bmerit { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%); border: 2px solid #4a4a6a; }
+.cta-bmerit .cta-logo {
+  background: var(--bsr-pink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.cta-bmerit .cta-text { color: #fff; }
+.cta-bmerit .cta-sub { color: rgba(255,255,255,.7); }
+.cta-text { flex: 1; }
+.cta-title { font-weight: 700; font-size: 20px; margin-bottom: 4px; }
+.cta-sub { font-size: 15px; color: var(--bsr-muted); }
+.cta-btn {
+  background: var(--hpb-orange);
+  color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px 32px;
+  border-radius: 32px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(255,107,0,.4);
+}
+.cta-bmerit .cta-btn { background: var(--bsr-pink); }
+.cta-phone { background: #f0f0f2; border: 2px solid #ddd; }
+.cta-phone .cta-btn { background: #555; }
+
+/* Intro stats */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.stat-box {
+  background: linear-gradient(135deg, var(--bsr-pink-light), #fff);
+  border: 1px solid #f5c2dc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  color: var(--bsr-pink);
+  font-weight: 700;
+}
+.stat-label { font-size: 11px; color: var(--bsr-muted); margin-top: 4px; }
+
+.site-footer {
+  text-align: center;
+  padding: 28px 24px;
+  font-size: 11px;
+  color: #999;
+  border-top: 1px solid var(--bsr-border);
+  background: #fff;
+}
+
+/* Mobile */
+@media (max-width: 1199px) {
+  .content-shell { width: 100%; padding: 0 0 40px; }
+  .sidebar { display: none; }
+  .content-card { padding: 20px 18px; margin-bottom: 16px; width: 100%; max-width: none; }
+  .salon-block { margin-bottom: 16px; width: 100%; }
+  .cta-banner { margin-bottom: 16px; width: 100%; }
+  .salon-header { grid-template-columns: 1fr; }
+  .salon-header-img { min-height: 160px; order: -1; }
+  .visual-strip { grid-template-columns: 1fr 1fr; }
+  .stats-row { grid-template-columns: 1fr; }
+  .cta-banner-inner { flex-wrap: wrap; }
+  .cta-btn { width: 100%; text-align: center; margin-top: 8px; }
+  .hero { min-height: 260px; }
+}
 </style>
 </head>
 <body>
-<header>
-  <div class="header-inner">
-    <div><div class="logo">SALON GUIDE</div><div class="sub">Beagent サロンリポート</div></div>
-    <span class="badge">準備中</span>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <div>
+      <div class="logo-mark">SALON GUIDE</div>
+      <div class="logo-sub">Beagent サロンリポート</div>
+    </div>
+    <span class="demo-badge series-badge">エリア特集</span>
   </div>
 </header>
-<main>
-  <h1>熊谷・行田エリアで<br>髪質改善が人気の美容室特集</h1>
-  <p>Beagent編集部にて取材・執筆中です。公開まで今しばらくお待ちください。</p>
-  <a class="btn" href="../kitamoto-kounosu-okegawa-7salons.html">北本・鴻巣・桶川エリアの記事を読む</a>
-  <div class="links">
-    <h2>関連エリア特集</h2>
-    <a href="../kitamoto-kounosu-okegawa-7salons.html">北本・鴻巣・桶川エリア（掲載中）</a>
-    <a href="ueno-okegawa.html">上尾・桶川エリア（準備中）</a>
-    <a href="saitama-city.html">さいたま市エリア（準備中）</a>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">SALON GUIDE · 髪質改善 · 2026年6月</span>
+    <h1 class="hero-title">【完全取材】熊谷・行田エリアで<br>髪質改善が人気の美容室6選</h1>
+    <p class="hero-lead">熊谷駅前から行田のプライベートサロンまで——埼玉県央の髪質改善実力店6軒を美容ライターが厳選。酸熱トリートメントから縮毛矯正まで比較ガイド。</p>
   </div>
-</main>
-<footer>© Beagent — SALON GUIDE 地域美容室リポート</footer>
+</section>
+
+<nav class="toc-bar" aria-label="目次">
+  <div class="toc-bar-inner">
+    <a href="#intro" class="toc-pill">導入</a>
+    <a href="#reason" class="toc-pill">髪質改善</a>
+    <a href="#salon-blossom" class="toc-pill">Blossom</a><a href="#salon-ursus" class="toc-pill">ursus</a><a href="#salon-permpam" class="toc-pill">Perm Pam</a><a href="#salon-oasis" class="toc-pill">Oasis</a><a href="#salon-822" class="toc-pill">822</a><a href="#salon-3d" class="toc-pill">3D</a>
+    <a href="#outro" class="toc-pill">おわりに</a>
+  </div>
+</nav>
+
+<details class="toc-mobile">
+  <summary>📋 目次を開く</summary>
+  <nav>
+    <a href="#intro">導入・早見表</a>
+    <a href="#reason">髪質改善が人気の理由</a>
+    <a href="#salon-blossom">1 Blossom</a><a href="#salon-ursus">2 ursus</a><a href="#salon-permpam">3 Perm Pam</a><a href="#salon-oasis">4 Oasis</a><a href="#salon-822">5 822</a><a href="#salon-3d">6 3D</a>
+    <a href="#outro">おわりに</a>
+  </nav>
+</details>
+
+<div class="content-shell">
+<div class="page-wrap">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">目次</div>
+      <nav>
+        <a href="#intro">導入・早見表</a>
+        <a href="#reason">髪質改善が人気の理由</a>
+        <span class="sidebar-salon">掲載サロン</span>
+        <a href="#salon-blossom">1 Blossom 熊谷店</a><a href="#salon-ursus">2 ursus 熊谷店</a><a href="#salon-permpam">3 Perm Pam 熊谷店</a><a href="#salon-oasis">4 Oasis GaRDEN 熊谷</a><a href="#salon-822">5 822（ハチニイニ）行田</a><a href="#salon-3d">6 3D 籠原</a>
+        <a href="#related-areas">他エリア特集</a>
+        <a href="#outro">おわりに</a>
+      </nav>
+      <div class="sidebar-areas">
+        <span class="sidebar-salon">関連エリア特集</span>
+        <a href="../kitamoto-kounosu-okegawa-7salons.html">北本・鴻巣・桶川</a>
+        <a href="ueno-okegawa.html">上尾・桶川</a>
+        <a href="kumagaya-gyoda.html">熊谷・行田</a>
+        <a href="saitama-city.html">さいたま市</a>
+      </div>
+    </div>
+  </aside>
+  <main class="main">
+
+    <div class="content-card" id="intro">
+      <p class="article-meta"><span>特集</span> · 熊谷・行田 · 2026年6月</p>
+      <p>埼玉県央部の熊谷市・行田市は、高崎線・秩父線沿線の拠点都市。熊谷駅前には年中無休の大型サロンから、口コミ高評価の専門店まで髪質改善メニューが充実しています。</p><p>今回は、熊谷・行田エリアで髪質改善に定評のある美容室6軒を、弊社美容ライターが厳選してご紹介します。</p>
+      <div class="disclaimer" style="margin-top:16px">Beagent編集部の美容ライターが厳選したサロン様への掲載企画について、企画にご賛同いただいたサロン様から掲載料を受領しています。</div>
+    </div>
+
+    <div class="content-card">
+      <h2 class="section-h2"><span class="num">✎</span>編集スタッフ紹介</h2>
+      <p class="lead-em">美容ライター・山田研二</p>
+      <p>埼玉県北部エリアを中心に、美容室取材を10年以上続けてきたライター。髪質改善・縮毛矯正・ヘッドスパなど、ケア系メニューの取材実績が豊富。</p>
+      <p class="lead-em" style="margin-top:12px">編集・構成：Beagent 編集部</p>
+    </div>
+
+    <div class="content-card">
+      <h2 class="section-h2"><span class="num">表</span>掲載美容室早見表</h2>
+      <div class="table-wrap"><table>
+        <tr><th>店名</th><th>席数</th><th>スタイリスト</th><th>カット</th></tr>
+        <tr><td>Blossom 熊谷店</td><td>8席</td><td>複数名</td><td>¥4,400</td></tr><tr><td>ursus by HEADLIGHT 熊谷店</td><td>8席</td><td>男性4名</td><td>¥3,960～</td></tr><tr><td>Perm Pam 熊谷店</td><td>5席</td><td>女性3名</td><td>¥3,960</td></tr><tr><td>Oasis GaRDEN 熊谷店</td><td>8席</td><td>複数名</td><td>¥1,000～</td></tr><tr><td>822（ハチニイニ）</td><td>4席以下</td><td>男性1名</td><td>要確認</td></tr><tr><td>3D</td><td>3席</td><td>女性1名</td><td>¥4,180</td></tr>
+      </table></div>
+      <p style="font-size:12px;color:var(--bsr-muted)">※2026年6月時点。価格は変動する可能性があります。</p>
+    </div>
+
+    <div class="content-card" id="reason">
+      <h2 class="section-h2"><span class="num">1</span>熊谷・行田で髪質改善が人気の理由</h2>
+      <div class="visual-strip">
+        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
+        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
+        <div class="visual-strip-item" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"><span class="label" style="position:static;background:none;color:var(--bsr-pink);padding:40px 12px;text-align:center;font-size:13px">酸熱トリートメント<br>縮毛矯正<br>ヘッドスパ</span></div>
+      </div>
+      <h3 class="section-h3">県央の拠点都市——駅前に髪質改善専門店が集結</h3>
+      <p>熊谷は埼玉県央のターミナル駅。Blossomやursusなど、上尾・大宮でも展開するチェーン店の熊谷店舗が髪質改善に力を入れており、行田市では822（ハチニイニ）のような完全マンツーマンサロンも人気です。</p>
+      <div class="stats-row">
+        <div class="stat-box"><div class="stat-num">3,960円〜</div><div class="stat-label">カット価格帯</div></div>
+        <div class="stat-box"><div class="stat-num">約4,200円</div><div class="stat-label">平均カット価格</div></div>
+        <div class="stat-box"><div class="stat-num">6軒</div><div class="stat-label">今回厳選サロン</div></div>
+      </div>
+      <div class="icon-row">
+        <span class="icon-chip">酸熱トリートメント</span><span class="icon-chip">縮毛矯正</span><span class="icon-chip">髪質改善TR</span><span class="icon-chip">ヘッドスパ</span><span class="icon-chip">白髪ぼかし</span>
+      </div>
+      <h3 class="section-h3">「髪質改善」とは？</h3>
+      <p>クセ・うねり・パサつき・ダメージなど、髪本来の状態を整え、扱いやすく美しい質感へ導く施術の総称です。</p>
+      <div class="writer-comment"><p>▼美容ライター・山田研二　熊谷駅徒歩圏の大型サロンと、行田の1人サロン——「駅近で手軽に」か「じっくり相談」かで選ぶと失敗しにくいエリアです。</p></div>
+    </div>
+<div class="section-divider"></div>
+
+    <article class="salon-block" id="salon-blossom">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県熊谷市</div>
+          <h2 class="salon-name">Blossom 熊谷店</h2>
+          <p class="salon-catch">熊谷駅徒歩5分・駐車場6台。年中無休の美髪サロン、SIN PURETE認定店。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#fce4f0,#fff5eb)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">365日褒められるカラーヘア——Blossom式髪質改善が人気</h3>
+        <p>上尾店と同ブランドの熊谷店。マイクロファインバブル標準装備、熊谷唯一のSIN PURETE認定取扱店。</p><p>髪質改善トリートメント×似合わせカラーで、継続できる褒められ髪を目指します。口コミ372件超。</p>
+        <div class="point-box">こだわり：Blossom式髪質改善超音波で、通常TRでは得られない艶感</div><div class="point-box">こだわり：縮毛矯正と相性抜群のトリートメント剤でダメージレスな美髪</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　上尾のBlossomと技術を共有。熊谷在住で「年中無休・駐車場完備」を重視する方に。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>【人気No.1】Blossom式髪質改善超音波+カット+髪質改善カラー ¥15,400→¥6,600</strong><p>新規限定の入門プラン。</p></div><div class="menu-card"><strong>似合わせカット＋縮毛矯正＋トリートメント ¥18,500→¥14,500</strong><p>自然なストレートを叶えるセット。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県熊谷市宮前町2-248 シャトー清幸2F</td></tr><tr><th>カット</th><td>¥4,400</td></tr><tr><th>営業</th><td>9:00～18:00（不定休）</td></tr><tr><th>アクセス</th><td>JR熊谷駅南口 徒歩5分／無料P6台</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000123774/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">Blossom 熊谷店 — ネット予約</div>
+          <div class="cta-sub">髪質改善超音波 · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+
+    <article class="salon-block" id="salon-ursus">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県熊谷市</div>
+          <h2 class="salon-name">ursus by HEADLIGHT 熊谷店</h2>
+          <p class="salon-catch">熊谷駅北口徒歩2分。口コミ高評価、豊富なトリートメントMENUでうるツヤ髪に。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#2a2a2a,#4a4a4a)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">話題の薬剤・商品取扱店。U24学割も人気</h3>
+        <p>熊谷駅北口から徒歩2分、ローソン角を左に50m。豊富なトリートメントメニューで髪質改善に対応。</p><p>デザインカラーから縮毛矯正、白髪ぼかしまで幅広く、学割U24クーポンも充実。</p>
+        <div class="point-box">こだわり：豊富なトリートメントMENUで、髪質に合わせたケアを提案</div><div class="point-box">こだわり：NET予約×でも電話で案内可能な柔軟対応</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　熊谷駅北口徒歩2分の好立地。メンズ・U24世代からも支持が厚いサロンです。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>【新規】カット+髪質改善トリートメント（クーポン各種）</strong><p>HPBで最新クーポンを要確認。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県熊谷市筑波2-83 SJビル1F</td></tr><tr><th>電話</th><td>048-527-8655</td></tr><tr><th>カット</th><td>¥3,960～</td></tr><tr><th>営業</th><td>9:00～21:00</td></tr><tr><th>アクセス</th><td>JR熊谷駅北口 徒歩2分</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000128290/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">ursus by HEADLIGHT 熊谷店 — ネット予約</div>
+          <div class="cta-sub">髪質改善・学割U24 · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+
+    <article class="salon-block" id="salon-permpam">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県熊谷市</div>
+          <h2 class="salon-name">Perm Pam 熊谷店</h2>
+          <p class="salon-catch">熊谷駅北口徒歩1分。グリニコ酸熱トリートメントで「今まで出会ったことのない髪質改善」を。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">駅前1分、家族でも通えるアットホームサロン</h3>
+        <p>JR熊谷駅北口徒歩1分の好立地。髪質改善酸熱トリートメント≪グリニコ≫が看板メニュー。</p><p>幅広い世代に親しまれ、丁寧なカウンセリングが口コミで高評価。</p>
+        <div class="point-box">こだわり：グリニコ酸熱トリートメントで、憧れの美髪へ</div><div class="point-box">こだわり：髪質改善・ストレート×カラー同時施術も対応</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　「駅近で酸熱を試したい」方に。熊谷駅利用者の定番サロンの一つです。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>グリニコ酸熱トリートメント+カット（クーポン各種）</strong><p>新規特別クーポンあり。HPB要確認。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県熊谷市筑波2-56-1 五城ビル1F</td></tr><tr><th>カット</th><td>¥3,960</td></tr><tr><th>営業</th><td>9:30～18:00（定休：火）</td></tr><tr><th>アクセス</th><td>JR熊谷駅北口 徒歩1分</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000170242/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">Perm Pam 熊谷店 — ネット予約</div>
+          <div class="cta-sub">酸熱トリートメント · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+
+    <article class="salon-block" id="salon-oasis">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県熊谷市</div>
+          <h2 class="salon-name">Oasis GaRDEN 熊谷店</h2>
+          <p class="salon-catch">熊谷駅南口駅前ビル5F。N.・TOKIOトリートメントで髪質改善、行田方面からも通いやすい。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#e8f0e8,#d0e0d0)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">駅前5F、ロング料金・指名料なしの通いやすさ</h3>
+        <p>熊谷FT南口駅前ビル5F。N.トリートメントやTOKIOトリートメントで髪質改善メニューが充実。</p><p>行田・上熊谷方面からもアクセスしやすく、ロング料金・指名料なしでリピートしやすい。</p>
+        <div class="point-box">こだわり：N.トリートメント+カラー+カットで、艶髪ケアを一度に</div><div class="point-box">こだわり：イルミナカラー取扱、デザインカラーも充実</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　熊谷駅直結の利便性重視派に。トリートメント系メニューのバリエーションが豊富です。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>【髪質改善】N.トリートメント+カラー+カット ¥9,480</strong><p>人気の入門セット。</p></div><div class="menu-card"><strong>【髪質改善】カット+縮毛矯正+高保湿TR ¥13,980</strong><p>本格ストレートコース。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県熊谷市桜木町1-94 熊谷FT南口駅前ビル5F</td></tr><tr><th>カット</th><td>¥1,000～</td></tr><tr><th>営業</th><td>9:00～19:00（不定休）</td></tr><tr><th>アクセス</th><td>JR熊谷駅南口 駅前</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000590599/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">Oasis GaRDEN 熊谷店 — ネット予約</div>
+          <div class="cta-sub">N.・TOKIO髪質改善 · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+
+    <article class="salon-block" id="salon-822">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県行田市</div>
+          <h2 class="salon-name">822（ハチニイニ）</h2>
+          <p class="salon-catch">行田市駅南口徒歩3分。縮毛矯正×頭皮・髪質改善ヘアエステの完全予約制サロン。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#fce4f0,#e8d5f0)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">行田で本格ケア——頭皮から整える髪質改善</h3>
+        <p>秩父線行田市駅南口徒歩3分。埼玉りそな銀行向かいの薄ピンク色の建物。完全予約制・マンツーマン施術。</p><p>縮毛矯正に加え、頭皮・髪質改善ヘアエステ、酸熱・育毛促進メニューまでトータルケア。</p>
+        <div class="point-box">こだわり：【カット込】縮毛矯正＆頭皮・髪質改善ヘアエステが看板</div><div class="point-box">こだわり：専用駐車場2台、お子さま同伴OK</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　熊谷から秩父線でアクセスできる行田の隠れ家サロン。頭皮ケアと縮毛矯正を同時に叶えたい方へ。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>【カット込】縮毛矯正＆頭皮・髪質改善ヘアエステ</strong><p>行田エリアでも評判の総合ケアメニュー。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県行田市行田3-2</td></tr><tr><th>営業</th><td>9:00～20:00（定休：要確認）</td></tr><tr><th>アクセス</th><td>秩父線行田市駅南口 徒歩3分／P2台</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000588385/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">822（ハチニイニ） — ネット予約</div>
+          <div class="cta-sub">縮毛矯正×ヘッドスパ · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+
+    <article class="salon-block" id="salon-3d">
+      <div class="salon-header">
+        <div class="salon-header-text">
+          <div class="salon-area">埼玉県熊谷市（籠原）</div>
+          <h2 class="salon-name">3D</h2>
+          <p class="salon-catch">籠原駅南口徒歩7分。3Dオリジナル超音波トリートメントでトータルビューティ。</p>
+        </div>
+        <div class="salon-header-img" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)"></div>
+      </div>
+      <div class="salon-body">
+        <h3 class="section-h3">3席の小型サロン——超音波TR×低ダメージカラー</h3>
+        <p>籠原駅南口徒歩7分、深谷方面からも車でアクセス可。No.1メニューの3Dオリジナル超音波トリートメントで髪質改善。</p><p>エステ・メイク・マツエクも併設するトータルビューティサロン。YUMEシャンプーで疲れも解消。</p>
+        <div class="point-box">こだわり：3Dオリジナル超音波トリートメントで、なりたいイメージの艶髪へ</div><div class="point-box">こだわり：1人のスタイリストが仕上げまで担当するマンツーマン</div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　熊谷中心部から少し離れた籠原エリアで、じっくり施術を受けたい方に。深谷・熊谷南部在住者にも。</p></div>
+        <h4 class="section-h4">ライターイチオシメニュー（案）</h4><div class="menu-card"><strong>3Dオリジナル超音波トリートメント+カット（クーポン各種）</strong><p>HPBで最新価格を要確認。</p></div>
+        <h4 class="section-h4">店舗情報</h4>
+        <div class="table-wrap"><table><tr><th>住所</th><td>埼玉県熊谷市籠原南2-187</td></tr><tr><th>カット</th><td>¥4,180</td></tr><tr><th>営業</th><td>9:30～18:00（定休：火・月2回）</td></tr><tr><th>アクセス</th><td>JR籠原駅南口 徒歩7分／Pあり</td></tr></table></div>
+      </div>
+    </article>
+        <a class="cta-banner cta-hpb" href="https://beauty.hotpepper.jp/slnH000443158/" target="_blank" rel="noopener">
+      <div class="cta-banner-inner">
+        <div class="cta-logo">HOT<br>PEPPER<br>Beauty</div>
+        <div class="cta-text">
+          <div class="cta-title">3D — ネット予約</div>
+          <div class="cta-sub">超音波髪質改善 · ホットペッパービューティー</div>
+        </div>
+        <span class="cta-btn">予約する →</span>
+      </div>
+    </a>
+    <div class="content-card" id="related-areas">
+      <h2 class="section-h2"><span class="num">他</span>他エリアの髪質改善サロン特集</h2>
+      <p>埼玉県内のほかのエリアでも、髪質改善に定評のある美容室を取材・紹介しています。お住まいの地域や通勤エリアに合わせて、ぜひご覧ください。</p>
+      <div class="area-links">
+        <a class="area-link-card" href="../kitamoto-kounosu-okegawa-7salons.html">
+          <strong>北本・鴻巣・桶川エリア</strong>
+          <span>髪質改善が人気の美容室7選 · 掲載中</span>
+        </a>
+        <a class="area-link-card" href="ueno-okegawa.html">
+          <strong>上尾・桶川エリア</strong>
+          <span>髪質改善が人気の美容室6選 · 掲載中</span>
+        </a>
+        <a class="area-link-card is-current" href="kumagaya-gyoda.html">
+          <strong>熊谷・行田エリア（本記事）</strong>
+          <span>髪質改善が人気の美容室6選 · 掲載中</span>
+        </a>
+        <a class="area-link-card" href="saitama-city.html">
+          <strong>さいたま市エリア</strong>
+          <span>髪質改善が人気の美容室6選 · 掲載中</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="content-card" id="outro">
+      <h2 class="section-h2"><span class="num">完</span>おわりに</h2>
+      <p>熊谷・行田エリアには、Blossomのような年中無休大型店から、822のような頭皮ケア特化サロンまで、髪質改善の選択肢が豊富です。</p>
+      <p>クセ・パサつき・白髪など、自分の悩みの深さと通いやすさを照らし合わせて、ぜひ足を運んでみてください。</p>
+      <p style="margin-top:20px;font-size:13px;color:var(--bsr-muted)">執筆：美容ライター・山田研二 ／ 編集：Beagent 編集部<br>※本記事は2026年6月時点の情報に基づく取材レポートです。掲載前に各店舗情報・価格の最新確認が必要です。</p>
+    </div>
+
+  </main>
+</div>
+</div>
+
+<footer class="site-footer">
+  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です
+</footer>
 </body>
 </html>
