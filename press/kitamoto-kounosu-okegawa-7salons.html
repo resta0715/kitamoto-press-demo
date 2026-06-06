@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【完全取材】北本・鴻巣・桶川エリアで髪質改善が人気の美容室7選 | BSR PRESS</title>
+<title>【完全取材】北本・鴻巣・桶川エリアで髪質改善が人気の美容室7選 | SALON GUIDE</title>
 <meta name="description" content="北本・鴻巣・桶川エリアで髪質改善に定評のある美容室7軒を厳選紹介。">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta name="page-version" content="design-v5">
+<meta name="page-version" content="design-v6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -80,15 +80,52 @@ img { max-width: 100%; height: auto; display: block; }
   border: none !important;
   letter-spacing: .06em;
 }
-.update-banner {
-  background: linear-gradient(90deg, var(--bsr-pink), #ff6b9d);
-  color: #fff;
-  text-align: center;
-  padding: 14px 20px;
-  font-size: 16px;
-  font-weight: 700;
+.series-badge {
+  background: var(--bsr-pink-light) !important;
+  color: var(--bsr-pink-dark) !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  padding: 6px 14px !important;
+  border: 1px solid #f5c2dc !important;
   letter-spacing: .04em;
 }
+.area-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.area-link-card {
+  display: block;
+  padding: 20px 22px;
+  border: 1px solid var(--bsr-border);
+  border-radius: 10px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .2s, box-shadow .2s;
+}
+.area-link-card:hover {
+  border-color: var(--bsr-pink);
+  box-shadow: 0 4px 16px rgba(228,0,127,.12);
+  text-decoration: none;
+}
+.area-link-card strong {
+  display: block;
+  font-size: 16px;
+  color: var(--bsr-pink-dark);
+  margin-bottom: 6px;
+}
+.area-link-card span {
+  font-size: 14px;
+  color: var(--bsr-muted);
+}
+.area-link-card.is-current {
+  border-color: var(--bsr-pink);
+  background: var(--bsr-pink-light);
+}
+.sidebar-areas { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--bsr-border); }
+.sidebar-areas a { font-size: 12px; }
 
 /* Hero */
 .hero {
@@ -588,18 +625,16 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 <header class="site-header">
   <div class="site-header-inner">
     <div>
-      <div class="logo-mark">BSR PRESS</div>
-      <div class="logo-sub">ベストサロンレポート</div>
+      <div class="logo-mark">SALON GUIDE</div>
+      <div class="logo-sub">Beagent サロンリポート</div>
     </div>
-    <span class="demo-badge v5-badge">DESIGN v5 · サイドバー+ワイド本文</span>
+    <span class="demo-badge series-badge">エリア特集</span>
   </div>
 </header>
 
-<div class="update-banner">✨ v5：左サイドバー維持＋本文列を画面98%まで拡大（1500px上限）</div>
-
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-tag">PRESS · 髪質改善 · 2026年6月</span>
+    <span class="hero-tag">SALON GUIDE · 髪質改善 · 2026年6月</span>
     <h1 class="hero-title">【完全取材】北本・鴻巣・桶川エリアで<br>髪質改善が人気の美容室7選</h1>
     <p class="hero-lead">低ダメージカラー、縮毛矯正、ヘッドスパ——エリアの実力サロン7軒を美容ライターが厳選。あなたに合う一軒が見つかる比較ガイド。</p>
   </div>
@@ -652,24 +687,31 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
         <a href="#salon-atte">⑤ ATTE 鴻巣駅前</a>
         <a href="#salon-konoha">⑥ 美容室 木の葉</a>
         <a href="#salon-style">⑦ STYLE 桶川</a>
+        <a href="#related-areas">他エリア特集</a>
         <a href="#outro">おわりに</a>
       </nav>
+      <div class="sidebar-areas">
+        <span class="sidebar-salon">関連エリア特集</span>
+        <a href="areas/ueno-okegawa.html">上尾・桶川エリア</a>
+        <a href="areas/kumagaya-gyoda.html">熊谷・行田エリア</a>
+        <a href="areas/saitama-city.html">さいたま市エリア</a>
+      </div>
     </div>
   </aside>
   <main class="main">
 
     <div class="content-card" id="intro">
-      <p class="article-meta"><span>PRESS</span> · 北本・鴻巣・桶川 · 2026年6月</p>
+      <p class="article-meta"><span>特集</span> · 北本・鴻巣・桶川 · 2026年6月</p>
       <p>埼玉県の北本・鴻巣・桶川エリアは、都心へのアクセスも良く、住宅地としても人気のエリアです。近年は「髪質改善」に特化した美容室や、髪質改善メニューを充実させたサロンが増え、広がりやうねり、パサつき、エイジング毛などのお悩みを持つ方から支持を集めています。</p>
       <p>今回は、北本・鴻巣・桶川エリアで髪質改善に定評のある美容室7軒を、弊社美容ライターが厳選してご紹介します。</p>
-      <div class="disclaimer" style="margin-top:16px">弊社美容ライターが厳選したサロン様に対してサイト掲載のご案内を行い、企画に賛同頂いたサロン様から掲載料金を受領しています。</div>
+      <div class="disclaimer" style="margin-top:16px">Beagent編集部の美容ライターが厳選したサロン様への掲載企画について、企画にご賛同いただいたサロン様から掲載料を受領しています。</div>
     </div>
 
     <div class="content-card">
       <h2 class="section-h2"><span class="num">✎</span>編集スタッフ紹介</h2>
-      <p class="lead-em">美容ライター・田中</p>
+      <p class="lead-em">美容ライター・山田研二</p>
       <p>埼玉県北部エリアを中心に、美容室取材を10年以上続けてきたライター。髪質改善・縮毛矯正・ヘッドスパなど、ケア系メニューの取材実績が豊富。</p>
-      <p class="lead-em" style="margin-top:12px">編集・構成：ベストサロンレポート編集部</p>
+      <p class="lead-em" style="margin-top:12px">編集・構成：Beagent 編集部</p>
     </div>
 
     <div class="content-card">
@@ -710,7 +752,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
       </div>
       <h3 class="section-h3">「髪質改善」とは？</h3>
       <p>クセ・うねり・パサつき・ダメージなど、髪本来の状態を整え、扱いやすく美しい質感へ導く施術の総称です。</p>
-      <div class="writer-comment"><p>▼美容ライター・田中　RestaやReactのように髪質改善専門店が複数ある rare なエリア。自分の悩みの深さや、サロンで過ごしたい時間に合わせて選ぶのがおすすめです。</p></div>
+      <div class="writer-comment"><p>▼美容ライター・山田研二　RestaやReactのように髪質改善専門店が複数ある rare なエリア。自分の悩みの深さや、サロンで過ごしたい時間に合わせて選ぶのがおすすめです。</p></div>
     </div>
 
     <div class="section-divider"></div>
@@ -731,7 +773,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
         <p>最大の特徴は、ヘアアイロンを使わない「髪質改善オペ（ノンアイロン縮毛矯正）」と、3大ダメージ原因を排除した「サプリカラー」です。</p>
         <div class="point-box">こだわり：アイロンを使わないダメージレスな縮毛矯正に定評あり</div>
         <div class="point-box">こだわり：ダメージ原因を排除したオリジナルカラーで、艶髪をキープ</div>
-        <div class="writer-comment"><p>▼美容ライター・田中　「本気で髪質を変えたい」方にこそ訪れてほしいサロン。ノンアイロン縮毛矯正とサプリカラーの組み合わせは、ダメージを恐れてカラーを控えていた方にも安心です。</p></div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　「本気で髪質を変えたい」方にこそ訪れてほしいサロン。ノンアイロン縮毛矯正とサプリカラーの組み合わせは、ダメージを恐れてカラーを控えていた方にも安心です。</p></div>
         <h4 class="section-h4">ライターイチオシメニュー（案）</h4>
         <div class="menu-card"><strong>【人気No.1】カット＋オリジナル髪質改善カラー ¥8,500</strong><p>似合わせカットと低ダメージのサプリカラーを組み合わせ。新規限定。</p></div>
         <div class="menu-card"><strong>【当店縮毛初めての方】髪質改善☆ナチュラルな縮毛矯正 ¥19,000</strong><p>Resta独自のノンアイロン縮毛矯正で、自然なまとまりを実現。</p></div>
@@ -771,7 +813,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
         <p>Restaと同グループの髪質改善特化サロン。北本駅西口から徒歩18分、駐車場6台完備。新規月100名超の実績。</p>
         <div class="point-box">こだわり：低ダメージカラーで、好きな色を長く楽しめる</div>
         <div class="point-box">こだわり：経験豊富なスタイリストが、再現性の高いスタイルを提案</div>
-        <div class="writer-comment"><p>▼美容ライター・田中　初回はResta、メンテナンスはReact——という使い分けも可能。U24向け学割クーポンもあり、学生から大人まで通いやすい。</p></div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　初回はResta、メンテナンスはReact——という使い分けも可能。U24向け学割クーポンもあり、学生から大人まで通いやすい。</p></div>
         <h4 class="section-h4">ライターイチオシメニュー（案）</h4>
         <div class="menu-card"><strong>【当店人気No.1】カット＋髪質改善カラー ¥9,000</strong><p>サプリカラーダブル＋ZEROトリートメント＋似合わせカット。新規限定。</p></div>
         <h4 class="section-h4">店舗情報</h4>
@@ -808,7 +850,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
         <h3 class="section-h3">駅近の好立地、3席のプライベートサロン</h3>
         <p>JR北本駅西口から徒歩1分。1人のスタイリストが仕上げまで担当する、マンツーマン施術が基本です。</p>
         <div class="point-box">こだわり：縮毛矯正・ストレートで、自然なまとまりを叶える</div>
-        <div class="writer-comment"><p>▼美容ライター・田中　「駅近でサクッと通いたい」方にぴったり。初めて縮毛矯正を試す方にも門戸が広い価格帯です。</p></div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　「駅近でサクッと通いたい」方にぴったり。初めて縮毛矯正を試す方にも門戸が広い価格帯です。</p></div>
         <h4 class="section-h4">店舗情報</h4>
         <div class="table-wrap"><table>
           <tr><th>住所</th><td>埼玉県北本市中央3-58 岡部ビル2F</td></tr>
@@ -843,7 +885,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
         <h3 class="section-h3">鴻巣駅徒歩3分、2席のプライベート空間</h3>
         <p>髪質改善専門美容室。リライフ式酸性ストレート（縮毛矯正）とオーガニックカラーが看板メニュー。</p>
         <div class="point-box">こだわり：酸性薬剤で、硬くなりすぎない自然なストレートを</div>
-        <div class="writer-comment"><p>▼美容ライター・田中　「本格的な髪質改善を、プライベート空間で受けたい」大人女性に最適。</p></div>
+        <div class="writer-comment"><p>▼美容ライター・山田研二　「本格的な髪質改善を、プライベート空間で受けたい」大人女性に最適。</p></div>
         <h4 class="section-h4">ライターイチオシメニュー（案）</h4>
         <div class="menu-card"><strong>【ご新規様限定】プレミアムリライフ式酸性ストレートコース ¥14,980</strong><p>カット＋酸性ストレート＋TOKIOトリートメント。</p></div>
         <h4 class="section-h4">店舗情報</h4>
@@ -969,11 +1011,34 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
       </div>
     </a>
 
+    <div class="content-card" id="related-areas">
+      <h2 class="section-h2"><span class="num">他</span>他エリアの髪質改善サロン特集</h2>
+      <p>埼玉県内のほかのエリアでも、髪質改善に定評のある美容室を取材・紹介しています。お住まいの地域や通勤エリアに合わせて、ぜひご覧ください。</p>
+      <div class="area-links">
+        <a class="area-link-card is-current" href="kitamoto-kounosu-okegawa-7salons.html">
+          <strong>北本・鴻巣・桶川エリア（本記事）</strong>
+          <span>髪質改善が人気の美容室7選 · 掲載中</span>
+        </a>
+        <a class="area-link-card" href="areas/ueno-okegawa.html">
+          <strong>上尾・桶川エリア</strong>
+          <span>髪質改善が人気の美容室特集 · 準備中</span>
+        </a>
+        <a class="area-link-card" href="areas/kumagaya-gyoda.html">
+          <strong>熊谷・行田エリア</strong>
+          <span>髪質改善が人気の美容室特集 · 準備中</span>
+        </a>
+        <a class="area-link-card" href="areas/saitama-city.html">
+          <strong>さいたま市エリア</strong>
+          <span>髪質改善が人気の美容室特集 · 準備中</span>
+        </a>
+      </div>
+    </div>
+
     <div class="content-card" id="outro">
       <h2 class="section-h2"><span class="num">完</span>おわりに</h2>
       <p>北本・鴻巣・桶川エリアには、髪質改善に特化した専門店から、総合型のフルビューティサロンまで、個性豊かな美容室が揃っています。</p>
       <p>自分の髪の悩み（クセ・パサつき・白髪・頭皮など）と、サロンで過ごしたい時間・雰囲気を照らし合わせて、ぜひ足を運んでみてください。</p>
-      <p style="margin-top:20px;font-size:13px;color:var(--bsr-muted)">執筆：美容ライター・田中 ／ 編集：ベストサロンレポート編集部<br>※本記事は2026年6月時点の叩き台です。掲載前に各店舗情報・価格の最新確認が必要です。</p>
+      <p style="margin-top:20px;font-size:13px;color:var(--bsr-muted)">執筆：美容ライター・山田研二 ／ 編集：Beagent 編集部<br>※本記事は2026年6月時点の情報に基づく取材レポートです。掲載前に各店舗情報・価格の最新確認が必要です。</p>
     </div>
 
   </main>
@@ -981,7 +1046,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 </div>
 
 <footer class="site-footer">
-  © ベストサロンレポート風デモ — 掲載前に各店舗情報の最新確認が必要です
+  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です
 </footer>
 </body>
 </html>
