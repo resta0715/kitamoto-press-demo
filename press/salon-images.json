@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "description": "SALON GUIDE 掲載店舗の店内写真マスタ。画像ファイルは press/images/ に配置。",
+    "updated": "2026-06-07",
+    "submissionGuide": "press/for-salons.html"
+  },
+  "resta": {
+    "slug": "salon-resta",
+    "name": "美容室Resta",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": "images/resta-interior.png",
+    "status": "published",
+    "updated": "2026-06-05"
+  },
+  "react": {
+    "slug": "salon-react",
+    "name": "美容院React",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": "images/react-interior.png",
+    "status": "published",
+    "updated": "2026-06-07",
+    "source": "Resta React Reis 採用サイト素材（public/lp/resta/）"
+  },
+  "reis": {
+    "slug": "salon-reis",
+    "name": "hair salon Reis",
+    "article": "areas/ueno-okegawa.html",
+    "image": "images/reis-interior.png",
+    "status": "published",
+    "updated": "2026-06-07",
+    "source": "Resta React Reis 採用サイト素材（public/lp/resta/）"
+  },
+  "sora": {
+    "slug": "salon-sora",
+    "name": "hair salon sora",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": null,
+    "status": "placeholder",
+    "updated": "2026-06-07"
+  },
+  "relife": {
+    "slug": "salon-relife",
+    "name": "Re:Life",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": null,
+    "status": "placeholder"
+  },
+  "atte": {
+    "slug": "salon-atte",
+    "name": "ATTE 鴻巣駅前店",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": null,
+    "status": "placeholder"
+  },
+  "konoha": {
+    "slug": "salon-konoha",
+    "name": "美容室 木の葉",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": null,
+    "status": "placeholder"
+  },
+  "style": {
+    "slug": "salon-style",
+    "name": "STYLE 桶川",
+    "article": "kitamoto-kounosu-okegawa-7salons.html",
+    "image": null,
+    "status": "placeholder"
+  }
+}

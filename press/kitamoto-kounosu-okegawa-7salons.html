@@ -20,7 +20,7 @@
   --bsr-border: #e8e8e8;
   --container: min(1500px, 98vw);
   --sidebar-w: 220px;
-  --img-base: https://resta0715.github.io/kitamoto-press-demo/press/images/;
+  --img-base: images/;
   --hpb-orange: #ff6b00;
   --hpb-bg: linear-gradient(135deg, #fff5eb 0%, #ffe8d6 100%);
 }
@@ -132,7 +132,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
   min-height: 480px;
   background: #222 center/cover no-repeat;
-  background-image: url('https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg');
+  background-image: url('images/hero-salon.jpg');
   display: flex;
   align-items: flex-end;
 }
@@ -618,6 +618,36 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
   .cta-btn { width: 100%; text-align: center; margin-top: 8px; }
   .hero { min-height: 260px; }
 }
+
+.salon-header-img.is-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 220px;
+}
+.salon-header-img.is-placeholder .placeholder-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  color: rgba(255,255,255,.85);
+  text-shadow: 0 1px 8px rgba(0,0,0,.25);
+  margin-bottom: 12px;
+}
+.salon-header-img.is-placeholder .photo-request {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(228,0,127,.85);
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.salon-header-img.is-placeholder .photo-request:hover {
+  background: var(--bsr-pink);
+  text-decoration: none;
+}
+.site-footer a { color: var(--bsr-pink); }
 </style>
 </head>
 <body>
@@ -732,8 +762,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
     <div class="content-card" id="reason">
       <h2 class="section-h2"><span class="num">1</span>北本・鴻巣・桶川で髪質改善が人気の理由</h2>
       <div class="visual-strip">
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
+        <div class="visual-strip-item"><img src="images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
+        <div class="visual-strip-item"><img src="images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
         <div class="visual-strip-item" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"><span class="label" style="position:static;background:none;color:var(--bsr-pink);padding:40px 12px;text-align:center;font-size:13px">縮毛矯正<br>ヘッドスパ<br>低ダメージカラー</span></div>
       </div>
       <h3 class="section-h3">住宅地エリアだからこそ、通いやすい「ケア特化型」サロンが増加</h3>
@@ -765,7 +795,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">美容室Resta</h2>
           <p class="salon-catch">北本No.1縮毛矯正×髪質改善。アイロンレスの独自施術で圧倒的艶髪を。</p>
         </div>
-        <div class="salon-header-img"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="美容室Resta 店内"></div>
+        <div class="salon-header-img"><img src="images/resta-interior.png" alt="美容室Resta 店内"></div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">髪への負担を最小限にした、Resta独自の髪質改善プログラム</h3>
@@ -806,7 +836,7 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">美容院React</h2>
           <p class="salon-catch">92％天然由来オーガニックカラーと髪質改善カラーで、U24世代から大人女性まで支持率◎</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#2a2a2a,#4a4a4a)"></div>
+        <div class="salon-header-img"><img src="images/react-interior.png" alt="美容院React 店内"></div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">「健康な髪のために、美容室で傷ませない」をモットーに</h3>
@@ -844,7 +874,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">hair salon sora</h2>
           <p class="salon-catch">北本駅西口徒歩1分。少人数制で一人ひとりの骨格・髪質に合わせたスタイルを。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)">
+          <span class="placeholder-label">hair salon sora</span>
+          <a class="photo-request" href="for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">駅近の好立地、3席のプライベートサロン</h3>
@@ -879,7 +912,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Re:Life（リライフ）</h2>
           <p class="salon-catch">5年連続注目サロン選出。92％天然由来オーガニックカラーと酸性ストレートの専門店。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#e8e0f0,#d4c8e8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#e8e0f0,#d4c8e8)">
+          <span class="placeholder-label">Re:Life</span>
+          <a class="photo-request" href="for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">鴻巣駅徒歩3分、2席のプライベート空間</h3>
@@ -916,7 +952,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">髪質改善&ヘッドスパ ATTE 鴻巣駅前店</h2>
           <p class="salon-catch">髪質改善×ヘッドスパ×育毛。完全予約制マンツーマンサロン。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)">
+          <span class="placeholder-label">ATTE 鴻巣駅前</span>
+          <a class="photo-request" href="for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">鴻巣駅東口徒歩4分、大人女性のためのトータルケア</h3>
@@ -951,7 +990,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">美容室 木の葉</h2>
           <p class="salon-catch">10年後のキレイを守る。和漢カラーと形状記憶パーマでダメージレス施術。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#d4e0c8,#b8c8a8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#d4e0c8,#b8c8a8)">
+          <span class="placeholder-label">美容室 木の葉</span>
+          <a class="photo-request" href="for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">3席の少人数制、半個室も完備</h3>
@@ -985,7 +1027,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">STYLE 桶川</h2>
           <p class="salon-catch">心の底から美しく。フルビューティサロンとして40年以上の実績。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#f0e8d8,#e0d0b8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#f0e8d8,#e0d0b8)">
+          <span class="placeholder-label">STYLE 桶川</span>
+          <a class="photo-request" href="for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">マメトラショッピングセンター内、バリアフリーでファミリーにも優しい</h3>
@@ -1046,7 +1091,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 </div>
 
 <footer class="site-footer">
-  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です
+  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です<br>
+  <a href="for-salons.html">掲載店舗様：店内写真のご提供について</a>
 </footer>
 </body>
 </html>

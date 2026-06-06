@@ -20,7 +20,7 @@
   --bsr-border: #e8e8e8;
   --container: min(1500px, 98vw);
   --sidebar-w: 220px;
-  --img-base: https://resta0715.github.io/kitamoto-press-demo/press/images/;
+  --img-base: ../images/;
   --hpb-orange: #ff6b00;
   --hpb-bg: linear-gradient(135deg, #fff5eb 0%, #ffe8d6 100%);
 }
@@ -132,7 +132,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
   min-height: 480px;
   background: #222 center/cover no-repeat;
-  background-image: url('https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg');
+  background-image: url('../images/hero-salon.jpg');
   display: flex;
   align-items: flex-end;
 }
@@ -618,6 +618,36 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
   .cta-btn { width: 100%; text-align: center; margin-top: 8px; }
   .hero { min-height: 260px; }
 }
+
+.salon-header-img.is-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 220px;
+}
+.salon-header-img.is-placeholder .placeholder-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  color: rgba(255,255,255,.85);
+  text-shadow: 0 1px 8px rgba(0,0,0,.25);
+  margin-bottom: 12px;
+}
+.salon-header-img.is-placeholder .photo-request {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(228,0,127,.85);
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.salon-header-img.is-placeholder .photo-request:hover {
+  background: var(--bsr-pink);
+  text-decoration: none;
+}
+.site-footer a { color: var(--bsr-pink); }
 </style>
 </head>
 <body>
@@ -708,8 +738,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
     <div class="content-card" id="reason">
       <h2 class="section-h2"><span class="num">1</span>さいたま市で髪質改善が人気の理由</h2>
       <div class="visual-strip">
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
+        <div class="visual-strip-item"><img src="../images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
+        <div class="visual-strip-item"><img src="../images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
         <div class="visual-strip-item" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"><span class="label" style="position:static;background:none;color:var(--bsr-pink);padding:40px 12px;text-align:center;font-size:13px">水素ケア<br>絹髪ストレート<br>完全個室</span></div>
       </div>
       <h3 class="section-h3">県都の美容トレンド発信地——専門店・個室サロンが集結</h3>
@@ -735,7 +765,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">ノンダメージサロン 大宮店</h2>
           <p class="salon-catch">大宮駅東口徒歩5分。世界初超高濃度水素ケアで絹髪を実現する専門店。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#1a1a2e,#2d2d44)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#1a1a2e,#2d2d44)">
+          <span class="placeholder-label">ノンダメージサロン</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">全国で予約困難——艶髪ブームを生み出したノンダメージサロンが大宮上陸</h3>
@@ -765,7 +798,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">VANILLA 大宮店</h2>
           <p class="salon-catch">大宮駅西口5分。大宮NO.1の髪質改善＆縮毛矯正＆カラー専門サロン。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)">
+          <span class="placeholder-label">VANILLA</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">10年後も美髪——パーマ・カラーを繰り返してもダメージレス</h3>
@@ -795,7 +831,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">RE:AIL by ECLART 大宮西口店</h2>
           <p class="salon-catch">大宮駅西口徒歩3分。HPB AWARD 2026 BEST SALON受賞、縮毛矯正×髪質改善が得意。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#e8e0f0,#d4c8e8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#e8e0f0,#d4c8e8)">
+          <span class="placeholder-label">RE:AIL</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">ECLARTグループ——自分史上最高の艶髪へ</h3>
@@ -825,7 +864,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Color Couture（カラークチュール）</h2>
           <p class="salon-catch">大宮駅東口2分。HPB AWARD 2025注目サロン、韓国ヘア×髪質改善オージュアTR。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#fff5eb,#ffe8d6)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#fff5eb,#ffe8d6)">
+          <span class="placeholder-label">Color Couture</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">大宮駅至近——韓国レイヤー×オージュア・LOAトリートメント</h3>
@@ -855,7 +897,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Bellpo（ベルポ）</h2>
           <p class="salon-catch">浦和駅徒歩3分・完全個室。縮毛矯正×ハイトーン×髪質改善支持率No.1。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)">
+          <span class="placeholder-label">Bellpo</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">完全個室サロン——ブリーチなしハイトーンも</h3>
@@ -885,7 +930,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Relato DESIGN COSTA 浦和</h2>
           <p class="salon-catch">浦和駅西口徒歩3分・口コミ4.7。縮毛矯正×髪質改善、21時まで営業。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)">
+          <span class="placeholder-label">Relato</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">お手頃価格×確かなクオリティ——当日予約もOK</h3>
@@ -942,7 +990,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 </div>
 
 <footer class="site-footer">
-  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です
+  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です<br>
+  <a href="../for-salons.html">掲載店舗様：店内写真のご提供について</a>
 </footer>
 </body>
 </html>

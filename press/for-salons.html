@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>掲載店舗様向け — 店内写真のご提供 | SALON GUIDE</title>
+<meta name="description" content="SALON GUIDE掲載サロン様向け。店内写真をご提供いただくと記事に掲載できます。">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+:root { --pink: #e4007f; --pink-light: #fff0f7; --text: #333; --muted: #666; --border: #e8e8e8; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Noto Sans JP', sans-serif; background: #f5f5f7; color: var(--text); line-height: 1.9; font-size: 16px; }
+a { color: var(--pink); }
+header { background: #fff; border-bottom: 3px solid var(--pink); padding: 14px 24px; }
+.header-inner { max-width: min(720px, 98vw); margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+.logo { font-family: 'Noto Serif JP', serif; font-weight: 700; color: var(--pink); font-size: 15px; letter-spacing: .08em; }
+.sub { font-size: 11px; color: var(--muted); }
+.badge { margin-left: auto; font-size: 12px; background: var(--pink-light); color: var(--pink); padding: 5px 12px; border-radius: 20px; border: 1px solid #f5c2dc; }
+main { max-width: min(720px, 94vw); margin: 0 auto; padding: 40px 20px 64px; }
+h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(22px, 4vw, 30px); line-height: 1.45; margin-bottom: 16px; }
+.lead { color: var(--muted); margin-bottom: 32px; font-size: 17px; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px 26px; margin-bottom: 20px; }
+.card h2 { font-size: 18px; color: var(--pink); margin-bottom: 12px; }
+.card ol, .card ul { padding-left: 1.4em; }
+.card li { margin-bottom: 8px; }
+.steps { counter-reset: step; list-style: none; padding: 0; }
+.steps li { counter-increment: step; padding-left: 36px; position: relative; margin-bottom: 14px; }
+.steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 26px; height: 26px; background: var(--pink); color: #fff; border-radius: 50%; font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.contact-box { background: var(--pink-light); border: 1px solid #f5c2dc; border-radius: 10px; padding: 18px 20px; margin-top: 12px; }
+.contact-box p { margin-bottom: 6px; }
+.note { font-size: 13px; color: var(--muted); margin-top: 16px; }
+.back { display: inline-block; margin-top: 24px; font-weight: 700; text-decoration: none; }
+footer { text-align: center; padding: 24px; font-size: 11px; color: #999; border-top: 1px solid var(--border); background: #fff; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div><div class="logo">SALON GUIDE</div><div class="sub">Beagent サロンリポート</div></div>
+    <span class="badge">掲載店舗様向け</span>
+  </div>
+</header>
+<main>
+  <h1>掲載店舗様へ<br>店内写真のご提供のお願い</h1>
+  <p class="lead">SALON GUIDE（Beagent サロンリポート）の記事をご覧いただきありがとうございます。貴店の魅力がより伝わるよう、<strong>店内写真</strong>をご提供いただければ、記事の店舗紹介欄に掲載いたします（無料）。</p>
+
+  <div class="card">
+    <h2>ご提供いただける写真</h2>
+    <ul>
+      <li>店内全景・セット面・シャンプー台・受付周りなど</li>
+      <li>施術中の様子（お客様の顔が写らないもの）</li>
+      <li>外観（看板が読めるもの）</li>
+    </ul>
+    <p class="note">※掲載前に内容を確認いただきます。他媒体掲載済みの写真でも構いません。</p>
+  </div>
+
+  <div class="card">
+    <h2>推奨サイズ・形式</h2>
+    <ul>
+      <li><strong>横長</strong>：1200×800px 以上（アスペクト比 3:2 前後）</li>
+      <li><strong>形式</strong>：JPG または PNG</li>
+      <li><strong>ファイル名</strong>：店舗名ローマ字可（例: react-interior.jpg）</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ご提出方法</h2>
+    <p>以下いずれかでお送りください。</p>
+    <div class="contact-box">
+      <p><strong>メール</strong>：<a href="mailto:salon@beagent.co.jp?subject=SALON%20GUIDE%20店内写真のご提供">salon@beagent.co.jp</a></p>
+      <p><strong>Googleフォーム</strong>：<a href="https://forms.gle/PLACEHOLDER_REPLACE" target="_blank" rel="noopener">写真提出フォーム（準備中・URL差替可）</a></p>
+      <p><strong>LINE</strong>：Beagent担当者経由（既存のやり取りがある場合）</p>
+    </div>
+    <p class="note" style="margin-top:14px">件名例：「SALON GUIDE 店内写真のご提供（店舗名）」<br>本文に：店舗名・掲載記事URL・ご担当者名・連絡先をお書きください。</p>
+  </div>
+
+  <div class="card">
+    <h2>掲載までの流れ</h2>
+    <ol class="steps">
+      <li>上記の方法で写真をお送りください</li>
+      <li>Beagent編集部が内容・画質を確認（著作権・肖像権の確認含む）</li>
+      <li>問題なければ <strong>2〜3営業日</strong> 以内に記事へ反映</li>
+      <li>反映後、掲載URLをご連絡（任意）</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>画像未掲載の店舗様</h2>
+    <p>現在、グラデーションのプレースホルダーで掲載している店舗がございます。写真をご提供いただければ、Resta・React・Reis と同様に店内画像を表示します。</p>
+    <p class="note">画像マスタ：<code>press/salon-images.json</code>（編集部管理）</p>
+  </div>
+
+  <a class="back" href="kitamoto-kounosu-okegawa-7salons.html">← 記事一覧（北本・鴻巣・桶川）へ</a>
+</main>
+<footer>© Beagent — SALON GUIDE 地域美容室リポート · 編集：Beagent 編集部</footer>
+</body>
+</html>

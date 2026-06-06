@@ -20,7 +20,7 @@
   --bsr-border: #e8e8e8;
   --container: min(1500px, 98vw);
   --sidebar-w: 220px;
-  --img-base: https://resta0715.github.io/kitamoto-press-demo/press/images/;
+  --img-base: ../images/;
   --hpb-orange: #ff6b00;
   --hpb-bg: linear-gradient(135deg, #fff5eb 0%, #ffe8d6 100%);
 }
@@ -132,7 +132,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: relative;
   min-height: 480px;
   background: #222 center/cover no-repeat;
-  background-image: url('https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg');
+  background-image: url('../images/hero-salon.jpg');
   display: flex;
   align-items: flex-end;
 }
@@ -618,6 +618,36 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
   .cta-btn { width: 100%; text-align: center; margin-top: 8px; }
   .hero { min-height: 260px; }
 }
+
+.salon-header-img.is-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 220px;
+}
+.salon-header-img.is-placeholder .placeholder-label {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  color: rgba(255,255,255,.85);
+  text-shadow: 0 1px 8px rgba(0,0,0,.25);
+  margin-bottom: 12px;
+}
+.salon-header-img.is-placeholder .photo-request {
+  font-size: 12px;
+  color: #fff;
+  background: rgba(228,0,127,.85);
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.salon-header-img.is-placeholder .photo-request:hover {
+  background: var(--bsr-pink);
+  text-decoration: none;
+}
+.site-footer a { color: var(--bsr-pink); }
 </style>
 </head>
 <body>
@@ -708,8 +738,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
     <div class="content-card" id="reason">
       <h2 class="section-h2"><span class="num">1</span>熊谷・行田で髪質改善が人気の理由</h2>
       <div class="visual-strip">
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
-        <div class="visual-strip-item"><img src="https://resta0715.github.io/kitamoto-press-demo/press/images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
+        <div class="visual-strip-item"><img src="../images/hero-salon.jpg" alt="サロンイメージ"><span class="label">艶髪ケア</span></div>
+        <div class="visual-strip-item"><img src="../images/resta-interior.png" alt="サロン店内"><span class="label">落ち着いた空間</span></div>
         <div class="visual-strip-item" style="background:linear-gradient(135deg,#fce4f0,#fff0f7)"><span class="label" style="position:static;background:none;color:var(--bsr-pink);padding:40px 12px;text-align:center;font-size:13px">酸熱トリートメント<br>縮毛矯正<br>ヘッドスパ</span></div>
       </div>
       <h3 class="section-h3">県央の拠点都市——駅前に髪質改善専門店が集結</h3>
@@ -735,7 +765,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Blossom 熊谷店</h2>
           <p class="salon-catch">熊谷駅徒歩5分・駐車場6台。年中無休の美髪サロン、SIN PURETE認定店。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#fce4f0,#fff5eb)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#fce4f0,#fff5eb)">
+          <span class="placeholder-label">Blossom 上尾店</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">365日褒められるカラーヘア——Blossom式髪質改善が人気</h3>
@@ -765,7 +798,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">ursus by HEADLIGHT 熊谷店</h2>
           <p class="salon-catch">熊谷駅北口徒歩2分。口コミ高評価、豊富なトリートメントMENUでうるツヤ髪に。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#2a2a2a,#4a4a4a)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#2a2a2a,#4a4a4a)">
+          <span class="placeholder-label">ursus 熊谷店</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">話題の薬剤・商品取扱店。U24学割も人気</h3>
@@ -795,7 +831,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Perm Pam 熊谷店</h2>
           <p class="salon-catch">熊谷駅北口徒歩1分。グリニコ酸熱トリートメントで「今まで出会ったことのない髪質改善」を。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#f5e6d3,#e8d5c0)">
+          <span class="placeholder-label">Perm Pam</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">駅前1分、家族でも通えるアットホームサロン</h3>
@@ -825,7 +864,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">Oasis GaRDEN 熊谷店</h2>
           <p class="salon-catch">熊谷駅南口駅前ビル5F。N.・TOKIOトリートメントで髪質改善、行田方面からも通いやすい。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#e8f0e8,#d0e0d0)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#e8f0e8,#d0e0d0)">
+          <span class="placeholder-label">Oasis GaRDEN</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">駅前5F、ロング料金・指名料なしの通いやすさ</h3>
@@ -855,7 +897,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">822（ハチニイニ）</h2>
           <p class="salon-catch">行田市駅南口徒歩3分。縮毛矯正×頭皮・髪質改善ヘアエステの完全予約制サロン。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#fce4f0,#e8d5f0)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#fce4f0,#e8d5f0)">
+          <span class="placeholder-label">822（行田）</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">行田で本格ケア——頭皮から整える髪質改善</h3>
@@ -885,7 +930,10 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
           <h2 class="salon-name">3D</h2>
           <p class="salon-catch">籠原駅南口徒歩7分。3Dオリジナル超音波トリートメントでトータルビューティ。</p>
         </div>
-        <div class="salon-header-img" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)"></div>
+        <div class="salon-header-img is-placeholder" style="background:linear-gradient(135deg,#d4e8f0,#b8d4e8)">
+          <span class="placeholder-label">3D</span>
+          <a class="photo-request" href="../for-salons.html">店内写真をご提供いただける方はこちら</a>
+        </div>
       </div>
       <div class="salon-body">
         <h3 class="section-h3">3席の小型サロン——超音波TR×低ダメージカラー</h3>
@@ -942,7 +990,8 @@ tr:last-child td, tr:last-child th { border-bottom: none; }
 </div>
 
 <footer class="site-footer">
-  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です
+  © Beagent — SALON GUIDE 地域美容室リポート · 掲載前に各店舗情報の最新確認が必要です<br>
+  <a href="../for-salons.html">掲載店舗様：店内写真のご提供について</a>
 </footer>
 </body>
 </html>
