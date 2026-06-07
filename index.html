@@ -27,6 +27,23 @@ main { max-width: min(900px, 94vw); margin: 0 auto; padding: 48px 20px 72px; }
 .card strong { display: block; font-size: 18px; color: #c2006a; margin-bottom: 6px; }
 .card span { font-size: 15px; color: var(--muted); }
 .card .tag { display: inline-block; margin-top: 10px; font-size: 12px; background: var(--pink-light); color: var(--pink); padding: 3px 10px; border-radius: 12px; }
+.card-nail {
+  border: 1px solid #e8d5c4;
+  background: linear-gradient(135deg, #fff 0%, #faf6f2 100%);
+  position: relative;
+  overflow: hidden;
+}
+.card-nail::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4a574, #c9a87c, #d4a574);
+}
+.card-nail strong { color: #9a7348; }
+.card-nail .tag { background: #f5e6e0; color: #9a7348; border: 1px solid #e8d5c4; }
+.card-nail:hover { border-color: #c9a87c; box-shadow: 0 8px 28px rgba(201,168,124,.18); }
+.section-label-nail { color: #9a7348; border-bottom-color: #e8d5c4; }
 footer { text-align: center; padding: 24px; font-size: 11px; color: #999; border-top: 1px solid var(--border); background: #fff; }
 </style>
 </head>
@@ -65,9 +82,9 @@ footer { text-align: center; padding: 24px; font-size: 11px; color: #999; border
       <span class="tag">ノンダメージサロン · VANILLA ほか</span>
     </a>
   </div>
-  <h2 class="section-label">ネイル特集</h2>
+  <h2 class="section-label section-label-nail">ネイル特集</h2>
   <div class="grid">
-    <a class="card" href="press/areas/totsuka-nail-5.html">
+    <a class="card card-nail" href="press/areas/totsuka-nail-5.html">
       <strong>横浜・戸塚エリア</strong>
       <span>人気のネイルサロン5選</span>
       <span class="tag">Reyel · le jardin · REMIA ほか</span>
