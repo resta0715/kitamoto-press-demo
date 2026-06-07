@@ -65,5 +65,14 @@
     "article": "kitamoto-kounosu-okegawa-7salons.html",
     "image": null,
     "status": "placeholder"
+  },
+  "reyel": {
+    "slug": "salon-reyel",
+    "name": "リエル (Reyel)",
+    "article": "areas/totsuka-nail-5.html",
+    "image": "images/reyel-interior.png",
+    "status": "published",
+    "updated": "2026-06-07",
+    "source": "掲載店舗提供"
   }
 }
