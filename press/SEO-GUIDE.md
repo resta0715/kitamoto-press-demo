@@ -55,14 +55,53 @@ https://salonlp.beagent.co.jp/press/areas/totsuka-nail-5.html
 | 項目 | 内容 |
 |------|------|
 | URL | `/press/areas/totsuka-nail-5.html` |
-| title / description | 戸塚・ネイルサロン・ジェル・フィルイン・Reyel 等 |
+| title / description | **戸塚 ネイルサロン**を先頭KWに配置。戸塚駅・中田・ジェル・フィルイン |
 | canonical | `https://salonlp.beagent.co.jp/press/areas/totsuka-nail-5.html` |
 | OGP / Twitter Card | hero-nail.jpg |
 | JSON-LD | Article, ItemList, FAQPage, BreadcrumbList, BeautySalon×5 |
-| FAQ | 5問（安い／フィルイン／パラジェル／相場／サクラス） |
-| 内部リンク | ハブ・北本7選・他エリア・for-salons |
+| FAQ | 5問（おすすめ／安い／フィルイン／ジェル相場／中田・サクラス） |
+| 内部リンク | ハブ「戸塚ネイルサロン特集」・北本7選・for-salons |
 
-**狙うキーワード例:** 戸塚 ネイルサロン、横浜 ジェルネイル、フィルイン 戸塚、Reyel 戸塚
+**狙うキーワード（優先順）:** 戸塚 ネイルサロン → 戸塚 ネイル → 戸塚駅 ネイル → 横浜 戸塚 ネイルサロン → 戸塚 ジェルネイル → 中田 ネイルサロン → 戸塚 ネイル おすすめ → 戸塚 ネイル 安い → 戸塚 フィルイン
+
+---
+
+## 2b. 「戸塚 ネイルサロン」で上位を取るための施策
+
+### Search Console クエリ監視
+
+1. GSC → **検索パフォーマンス** → クエリフィルタに `戸塚` を入力
+2. 週次で確認する指標：
+   - **表示回数・CTR** — 「戸塚 ネイルサロン」「戸塚 ネイル」の順位変動
+   - **平均掲載順位** — 目標：3ヶ月で 10 位以内
+3. インデックス登録：URL 検査 → `totsuka-nail-5.html` → **インデックス登録をリクエスト**（更新のたび）
+4. クリックが付かないクエリ（表示のみ）→ 記事の FAQ / H2 に自然追加を検討
+
+### 被リンクのアンカーテキスト
+
+被リンク獲得時は、可能な限りアンカーに **「戸塚 ネイルサロン」** を含める：
+
+| リンク元 | 推奨アンカー | URL |
+|----------|-------------|-----|
+| Reyel 公式・Instagram | 戸塚 ネイルサロンおすすめ記事 | totsuka-nail-5.html |
+| Beagent 本体 | 戸塚ネイルサロン特集（SALON GUIDE） | totsuka-nail-5.html |
+| 地域ブログ・掲示板 | 戸塚のネイルサロン比較ガイド | totsuka-nail-5.html |
+| HPB 店舗ブログ | メディア掲載：戸塚 ネイルサロン5選 | totsuka-nail-5.html |
+
+**避けるべきアンカー:** 「こちら」「詳細」「click here」だけのリンク
+
+### 店舗側に依頼する拡散文（アンカー付き）
+
+```
+SALON GUIDEに「戸塚 ネイルサロンおすすめ5選」として掲載されました。
+▶ https://salonlp.beagent.co.jp/press/areas/totsuka-nail-5.html
+#戸塚ネイルサロン #戸塚ネイル #横浜ネイル
+```
+
+### sitemap 優先度
+
+- `totsuka-nail-5.html` → **priority 1.0**（メイン集客記事）
+- 更新のたび `lastmod` を更新し GSC で再送信
 
 ---
 
